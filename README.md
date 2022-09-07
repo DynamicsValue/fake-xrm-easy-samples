@@ -7,14 +7,14 @@ This is the supporting code for a the following scenario :
 ## Scenario : Azure function + Dataverse + Plugin
 
 - 1) We receive some contactdata into an Azure Function
-- 2) The Azure function creates a Contact using DataverseClient nuget package in .net core (which is about to reach official production status 1.0.0 in June 2022!)
+- 2) The Azure function creates a Contact using DataverseClient nuget package in .net core
 - 3) A plugin that fires on create of that contact record and creates a follow up Task.
 
 In the demo we approached unit testing such scenario as follows:
 
 - 1) A unit test to validate that the contact data is sent to Dataverse correcly (the contact is created)
 - 2) A unit test to verify the plugin creates a follow up task given a Create message with an OutputParameter (the resulting from the Create operation) was received
-- 3) A pipeline simulation scenario that wires everything together In-Memory, to check that both the contact and the task are created (this is experimental stuff, because really, the target versions of the client (.net core 3.1) and the server (net462) are different in production, but eventually....)
+- 3) A pipeline simulation scenario that wires **everything together In-Memory**, to check that both the contact and the task are created (this is experimental stuff, because really, the target versions of the client (.net core 3.1) and the server (net462) are different in production, but eventually....)
 
 # Building and testing
 
