@@ -50,5 +50,6 @@ Basically, you can use FakeXrmEasy free of charge:
 
 Please, have a look at our [licensing FAQ for more details](https://dynamicsvalue.github.io/fake-xrm-easy-docs/licensing/faq/).
 
+Pricing: https://dynamicsvalue.com/pricing
 
 
