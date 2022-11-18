@@ -3,6 +3,7 @@ using DataverseEntities;
 using FakeXrmEasy.Abstractions.Plugins.Enums;
 using FakeXrmEasy.Pipeline;
 using FakeXrmEasy.Plugins.Audit;
+using FakeXrmEasy.Plugins.PluginSteps;
 using Microsoft.Xrm.Sdk.Messages;
 using Xunit;
 
@@ -11,9 +12,15 @@ namespace FakeXrmEasy.Samples.Plugins.Tests
     public class CreateContactTestsWithSimulation : FakeXrmEasyPipelineTestsBase
     {
         [Fact]
-        public async void Should_create_contact_with_pipeline()
+        public void Should_create_contact_with_pipeline()
         {
-            _context.RegisterPluginStep<FollowUpPlugin, Contact>("Create", ProcessingStepStage.Preoperation, ProcessingStepMode.Synchronous);
+            _context.RegisterPluginStep<FollowUpPlugin>(new PluginStepDefinition()
+            {
+                EntityLogicalName = Contact.EntityLogicalName,
+                MessageName = "Create",
+                Stage = ProcessingStepStage.Preoperation,
+                Mode = ProcessingStepMode.Synchronous
+            });
 
             _service.Execute(new CreateRequest()
             {
