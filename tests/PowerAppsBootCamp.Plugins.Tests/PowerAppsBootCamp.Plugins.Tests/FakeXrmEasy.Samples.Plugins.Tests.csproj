@@ -46,17 +46,17 @@
     <Reference Include="FakeItEasy, Version=6.0.0.0, Culture=neutral, PublicKeyToken=eff28e2146d5fd2c, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\FakeItEasy.6.0.0\lib\net45\FakeItEasy.dll</HintPath>
     </Reference>
-    <Reference Include="FakeXrmEasy.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\FakeXrmEasy.Abstractions.v9.2.2.0\lib\net462\FakeXrmEasy.Abstractions.dll</HintPath>
+    <Reference Include="FakeXrmEasy.Abstractions, Version=2.3.0.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\FakeXrmEasy.Abstractions.v9.2.3.0-zlocal\lib\net462\FakeXrmEasy.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="FakeXrmEasy.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\FakeXrmEasy.Core.v9.2.2.0\lib\net462\FakeXrmEasy.Core.dll</HintPath>
+    <Reference Include="FakeXrmEasy.Core, Version=2.3.0.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\FakeXrmEasy.Core.v9.2.3.0-zlocal\lib\net462\FakeXrmEasy.Core.dll</HintPath>
     </Reference>
     <Reference Include="FakeXrmEasy.Messages, Version=2.2.0.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\FakeXrmEasy.Messages.v9.2.2.0\lib\net462\FakeXrmEasy.Messages.dll</HintPath>
     </Reference>
-    <Reference Include="FakeXrmEasy.Plugins, Version=2.2.0.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\FakeXrmEasy.Plugins.v9.2.2.0\lib\net462\FakeXrmEasy.Plugins.dll</HintPath>
+    <Reference Include="FakeXrmEasy.Plugins, Version=2.3.0.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\FakeXrmEasy.Plugins.v9.2.3.0-zlocal\lib\net462\FakeXrmEasy.Plugins.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Crm.Sdk.Proxy, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.CrmSdk.CoreAssemblies.9.0.2.27\lib\net462\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
@@ -69,12 +69,6 @@
     </Reference>
     <Reference Include="Microsoft.Rest.ClientRuntime, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.CrmSdk.XrmTooling.CoreAssembly.9.0.2.4\lib\net452\Microsoft.Rest.ClientRuntime.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\MSTest.TestFramework.2.1.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\MSTest.TestFramework.2.1.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xrm.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.CrmSdk.CoreAssemblies.9.0.2.27\lib\net462\Microsoft.Xrm.Sdk.dll</HintPath>
