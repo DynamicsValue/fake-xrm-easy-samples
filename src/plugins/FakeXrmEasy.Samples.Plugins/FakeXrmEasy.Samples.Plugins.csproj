@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FakeXrmEasy.Abstractions, Version=2.3.0.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\FakeXrmEasy.Abstractions.v9.2.3.0-zlocal\lib\net462\FakeXrmEasy.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>

@@ -120,7 +120,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountNumberPluginTests.cs" />
+    <Compile Include="CreateContactTestsWithAutomaticSimulation.cs" />
     <Compile Include="CreateContactTestsWithSimulation.cs" />
+    <Compile Include="FakeXrmEasyAutomaticPipelineTestsBase.cs" />
     <Compile Include="FakeXrmEasyPipelineTestsBase.cs" />
     <Compile Include="FakeXrmEasyTestsBase.cs" />
     <Compile Include="FollowUpPluginTests.cs" />
