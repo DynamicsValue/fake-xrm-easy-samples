@@ -1,5 +1,6 @@
 ﻿using FakeXrmEasy.Abstractions;
 using FakeXrmEasy.Abstractions.Enums;
+using FakeXrmEasy.FakeMessageExecutors;
 using FakeXrmEasy.Middleware;
 using FakeXrmEasy.Middleware.Crud;
 using FakeXrmEasy.Middleware.Messages;
@@ -9,6 +10,7 @@ using Microsoft.Xrm.Sdk;
 using MyPluginsSample;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using Xunit;
 
@@ -50,7 +52,14 @@ namespace MyPluginsSampleTests
 
         private Func<Assembly, IEnumerable<PluginStepDefinition>> PluginStepDiscoveryFn = (Assembly assembly) =>
         {
-            return new List<PluginStepDefinition>();
+            return (from t in assembly.GetTypes()
+                        let attributes = t.GetCustomAttributes(typeof(CrmPluginRegistrationAttribute), true)
+                        where attributes != null && attributes.Length > 0
+                        select attributes
+                                    .Cast<CrmPluginRegistrationAttribute>()
+                                    .Select(attribute => attribute.ToPluginStepDefinition(t))
+                        ).SelectMany(pluginStep => pluginStep)
+                        .AsEnumerable();
         };
 
     }
