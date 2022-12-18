@@ -30,6 +30,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>FakeXrmEasy.Samples.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="FakeXrmEasy.Abstractions, Version=2.3.0.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\FakeXrmEasy.Abstractions.v9.2.3.0-zlocal\lib\net462\FakeXrmEasy.Abstractions.dll</HintPath>
@@ -90,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="FakeXrmEasy.Samples.snk" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="..\..\shared\FakeXrmEasy.Samples.Plugins.Shared\FakeXrmEasy.Samples.Plugins.Shared.projitems" Label="Shared" />

@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)AccountNumberPlugin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomApiSumPlugin.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FollowUpPlugin.cs" />
   </ItemGroup>
 </Project>
