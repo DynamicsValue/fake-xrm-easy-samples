@@ -12,9 +12,9 @@ namespace FakeXrmEasy.Samples.Plugins.Tests
             {
                 Prop1 = 7,
                 Prop2 = 3
-            });
+            }) as dv_SumResponse;
 
-            Assert.Equal(10, sumResponse.Results["Sum"]);
+            Assert.Equal(10, sumResponse.Sum);
         }
     }
 }
