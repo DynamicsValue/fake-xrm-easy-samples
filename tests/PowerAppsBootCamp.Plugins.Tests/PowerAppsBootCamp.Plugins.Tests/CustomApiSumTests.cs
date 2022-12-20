@@ -12,8 +12,6 @@ namespace FakeXrmEasy.Samples.Plugins.Tests
 {
     public class CustomApiSumTests : FakeXrmEasyPipelineWithCustomApisTestsBase
     {
-        // 100.000
-
         private class SomePlugin : IPlugin
         {
             public void Execute(IServiceProvider serviceProvider)
