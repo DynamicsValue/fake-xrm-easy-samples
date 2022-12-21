@@ -154,7 +154,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutomaticCustomApiExecutor.cs" />
     <Compile Include="AutomaticCustomApiFakeMessageExecutorExtensions.cs" />
     <Compile Include="CrmPluginRegistrationAttributeExtensions.cs" />
     <Compile Include="CustomApiSumTests.cs" />
