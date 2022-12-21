@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPluginsSample", "MyPluginsSample\MyPluginsSample.csproj", "{B33ACCFD-9479-49CE-AAE5-524156375035}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeXrmEasy.Samples.PluginsWithSpkl", "MyPluginsSample\FakeXrmEasy.Samples.PluginsWithSpkl.csproj", "{B33ACCFD-9479-49CE-AAE5-524156375035}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPluginsSampleTests", "MyPluginsSampleTests\MyPluginsSampleTests.csproj", "{EDE8AC26-8DDF-4F42-A699-06E4EC686120}"
 EndProject

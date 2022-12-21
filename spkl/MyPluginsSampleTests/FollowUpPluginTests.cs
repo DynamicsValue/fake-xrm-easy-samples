@@ -17,11 +17,11 @@ namespace MyPluginsSampleTests
         {
             var pluginSteps = _context.CreateQuery<SdkMessageProcessingStep>().ToList();
             
-            Assert.Single(pluginSteps);
+            Assert.NotEmpty(pluginSteps);
 
             var processingStep = pluginSteps.FirstOrDefault();
-            Assert.Equal((int) ProcessingStepStage.Preoperation, processingStep.Stage.Value);
-            Assert.Equal((int) ProcessingStepMode.Synchronous, processingStep.Mode.Value);
+            Assert.Equal((int) ProcessingStepStage.Preoperation, (int) processingStep.Stage.Value);
+            Assert.Equal((int) ProcessingStepMode.Synchronous, (int) processingStep.Mode.Value);
             Assert.Equal(1, processingStep.Rank);
 
             var sdkMessage = _context.CreateQuery<SdkMessage>()

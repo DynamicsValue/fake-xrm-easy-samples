@@ -4,7 +4,7 @@ using Microsoft.Xrm.Sdk;
 using System;
 using System.ServiceModel;
 
-namespace MyPluginsSample
+namespace FakeXrmEasy.Samples.PluginsWithSpkl
 {
     [CrmPluginRegistration(
         MessageNameEnum.Create, 

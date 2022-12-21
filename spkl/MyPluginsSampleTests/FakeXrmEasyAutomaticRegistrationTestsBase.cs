@@ -6,13 +6,12 @@ using FakeXrmEasy.Middleware.Crud;
 using FakeXrmEasy.Middleware.Messages;
 using FakeXrmEasy.Middleware.Pipeline;
 using FakeXrmEasy.Plugins.PluginSteps;
+using FakeXrmEasy.Samples.PluginsWithSpkl;
 using Microsoft.Xrm.Sdk;
-using MyPluginsSample;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Xunit;
 
 namespace MyPluginsSampleTests
 {
@@ -29,8 +28,10 @@ namespace MyPluginsSampleTests
                             // Add* -> Middleware configuration
                             .AddCrud()
                             .AddFakeMessageExecutors(Assembly.GetAssembly(typeof(AddListMembersListRequestExecutor)))
+                            .AddAutomaticCustomApiFakeMessageExecutors(Assembly.GetAssembly(typeof(CustomApiSumPlugin)))
                             .AddPipelineSimulation(new PipelineOptions()
                             {
+                                UsePluginStepAudit = true,
                                 UseAutomaticPluginStepRegistration = true,
                                 PluginAssemblies = new List<Assembly>()
                                 {
@@ -57,10 +58,13 @@ namespace MyPluginsSampleTests
                         where attributes != null && attributes.Length > 0
                         select attributes
                                     .Cast<CrmPluginRegistrationAttribute>()
+                                    .Where(pluginAttribute => pluginAttribute.Stage != null) //Exclude custom apis
                                     .Select(attribute => attribute.ToPluginStepDefinition(t))
                         ).SelectMany(pluginStep => pluginStep)
                         .AsEnumerable();
         };
+
+
 
     }
 }
