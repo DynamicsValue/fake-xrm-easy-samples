@@ -18,20 +18,19 @@ namespace FakeXrmEasy.Samples.Plugins.Tests
         public FakeXrmEasyTestsBase()
         {
             _context = MiddlewareBuilder
-                            .New()
+                        .New()
 
-                            // Add* -> Middleware configuration
-                            .AddCrud()
-                            .AddFakeMessageExecutors(Assembly.GetAssembly(typeof(AddListMembersListRequestExecutor)))
-                            .AddPipelineSimulation(new PipelineOptions() { UsePluginStepAudit = true })
+                        // Add* -> Middleware configuration
+                        .AddCrud()
+                        .AddFakeMessageExecutors(Assembly.GetAssembly(typeof(AddListMembersListRequestExecutor)))
 
-                            // Use* -> Defines pipeline sequence
-                            .UsePipelineSimulation()
-                            .UseCrud()
-                            .UseMessages()
+                        // Use* -> Defines pipeline sequence
 
-                            .SetLicense(FakeXrmEasyLicense.RPL_1_5)
-                            .Build();
+                        .UseCrud()
+                        .UseMessages()
+
+                        .SetLicense(FakeXrmEasyLicense.RPL_1_5)
+                        .Build();
 
             _service = _context.GetOrganizationService();
         }

@@ -1,10 +1,19 @@
-﻿using DataverseEntities;
+﻿
+using DataverseEntities;
 using Microsoft.Xrm.Sdk;
 using System;
 using System.ServiceModel;
 
-namespace FakeXrmEasy.Samples.Plugins
+namespace FakeXrmEasy.Samples.PluginsWithSpkl
 {
+    [CrmPluginRegistration(
+        MessageNameEnum.Create, 
+        Contact.EntityLogicalName, 
+        StageEnum.PreOperation, 
+        ExecutionModeEnum.Synchronous,
+        "", "PreCreate Contact",
+        1, IsolationModeEnum.Sandbox
+    )]
     public class FollowUpPlugin : IPlugin
     {
         public void Execute(IServiceProvider serviceProvider)

@@ -3,14 +3,12 @@
   <PropertyGroup>
     <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>56db6983-334b-4755-89df-8e538889a196</SharedGUID>
+    <SharedGUID>bda16e94-61d2-4cce-93c7-81ea9be591c5</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>FakeXrmEasy.Samples.Plugins</Import_RootNamespace>
+    <Import_RootNamespace>MyPluginsSample.Entities</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)AccountNumberPlugin.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)CustomApiSumPlugin.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)FollowUpPlugin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GeneratedCode.cs" />
   </ItemGroup>
 </Project>

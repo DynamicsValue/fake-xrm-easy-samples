@@ -2,6 +2,7 @@
 using FakeXrmEasy.Abstractions.Plugins.Enums;
 using FakeXrmEasy.Pipeline;
 using FakeXrmEasy.Plugins.Audit;
+using FakeXrmEasy.Plugins.PluginSteps;
 using Microsoft.Xrm.Sdk.Messages;
 using System.Linq;
 using Xunit;
@@ -13,7 +14,11 @@ namespace FakeXrmEasy.Samples.Plugins.Tests
         [Fact]
         public void Should_execute_registered_plugin_step()
         {
-            _context.RegisterPluginStep<AccountNumberPlugin>("Create", ProcessingStepStage.Preoperation);
+            _context.RegisterPluginStep<AccountNumberPlugin>(new PluginStepDefinition()
+            {
+                MessageName = "Create",
+                Stage = ProcessingStepStage.Preoperation
+            });
 
             var account = new Account() { Name = "Some name" };
 

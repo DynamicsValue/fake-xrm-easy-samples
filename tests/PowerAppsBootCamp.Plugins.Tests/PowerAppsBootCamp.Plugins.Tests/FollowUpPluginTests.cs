@@ -22,11 +22,14 @@ namespace FakeXrmEasy.Samples.Plugins.Tests
         [Fact]
         public void Should_create_follow_task_associated_with_the_contact()
         {
+            //Arrange
             var pluginContext = _context.GetDefaultPluginContext();
             pluginContext.OutputParameters.Add("id", _contact.Id.ToString());
 
+            //Act
             _context.ExecutePluginWithTarget<FollowUpPlugin>(pluginContext, _contact);
 
+            //Assert
             var tasks = _context.CreateQuery<Task>().ToList();
             Assert.Single(tasks);
 
