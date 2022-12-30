@@ -6,6 +6,8 @@ This is the supporting code for a the following scenario :
 
 ## Scenario : Azure function + Dataverse + Plugin
 
+[You'll find an overview of why / how this project is structured in the docs here](https://dynamicsvalue.github.io/fake-xrm-easy-docs/quickstart/azure-functions/)
+
 - 1) We receive some contactdata into an Azure Function
 - 2) The Azure function creates a Contact using DataverseClient nuget package in .net core
 - 3) A plugin that fires on create of that contact record and creates a follow up Task.
@@ -27,6 +29,20 @@ From the command line:
     dotnet test
 
 Alternatively from VS and Test Explorer
+
+## Scenario : Automatic Registration of Plugin Steps with Spkl
+
+You'll find the sample code for automatic registration with Spkl under the /spkl directory.
+
+Also please make sure to [check out the relevant documentation](https://dynamicsvalue.github.io/fake-xrm-easy-docs/quickstart/plugins/pipeline/automatic-registration/) 
+
+
+## Custom Apis
+
+The FakeXrmEasy.Samples.sln also has a running example of a custom api.
+
+[Please check the docs for high level [overview of Messages](https://dynamicsvalue.github.io/fake-xrm-easy-docs/quickstart/messages/), [Custom Actions](https://dynamicsvalue.github.io/fake-xrm-easy-docs/quickstart/messages/custom-actions/), and [Custom Apis](https://dynamicsvalue.github.io/fake-xrm-easy-docs/quickstart/messages/custom-apis/).
+
 
 # Release notes
 
