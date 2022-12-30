@@ -18,8 +18,7 @@ namespace MyAzureFunctionTests
             {
                 MessageName = "Create",
                 Rank = 1,
-                EntityLogicalName = "Contact",
-                EntityTypeCode = Contact.EntityTypeCode
+                EntityLogicalName = Contact.EntityLogicalName
             });
         }
 
