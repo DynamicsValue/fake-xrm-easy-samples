@@ -41,7 +41,7 @@ Also please make sure to [check out the relevant documentation](https://dynamics
 
 The FakeXrmEasy.Samples.sln also has a running example of a custom api.
 
-[Please check the docs for high level [overview of Messages](https://dynamicsvalue.github.io/fake-xrm-easy-docs/quickstart/messages/), [Custom Actions](https://dynamicsvalue.github.io/fake-xrm-easy-docs/quickstart/messages/custom-actions/), and [Custom Apis](https://dynamicsvalue.github.io/fake-xrm-easy-docs/quickstart/messages/custom-apis/).
+Please check the docs for high level [overview of Messages](https://dynamicsvalue.github.io/fake-xrm-easy-docs/quickstart/messages/), [Custom Actions](https://dynamicsvalue.github.io/fake-xrm-easy-docs/quickstart/messages/custom-actions/), and [Custom Apis](https://dynamicsvalue.github.io/fake-xrm-easy-docs/quickstart/messages/custom-apis/).
 
 
 # Release notes
