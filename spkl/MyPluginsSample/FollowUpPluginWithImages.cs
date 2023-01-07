@@ -7,15 +7,21 @@ using System.ServiceModel;
 namespace FakeXrmEasy.Samples.PluginsWithSpkl
 {
     [CrmPluginRegistration(
-        MessageNameEnum.Create, 
-        Contact.EntityLogicalName, 
-        StageEnum.PreOperation, 
+        MessageNameEnum.Update,
+        Contact.EntityLogicalName,
+        StageEnum.PreValidation,
         ExecutionModeEnum.Synchronous,
-        "", "PreCreate Contact",
-        1, IsolationModeEnum.Sandbox
+        filteringAttributes:"firstname,lastname", 
+        stepName:"PreCreate Contact",
+        executionOrder: 1, 
+        isolationModel: IsolationModeEnum.Sandbox,
+        Image1Type = ImageTypeEnum.PreImage,
+        Image1Name = "PreImage",
+        Image1Attributes = "firstname,lastname"
     )]
-    public class FollowUpPlugin : IPlugin
+    public class FollowUpPluginWithImages : IPlugin
     {
+        private readonly string preImageAlias = "PreImage";
         public void Execute(IServiceProvider serviceProvider)
         {
             #region Boilerplate
@@ -30,14 +36,17 @@ namespace FakeXrmEasy.Samples.PluginsWithSpkl
             //</snippetFollowupPlugin1>
 
             #endregion
-            
+
             //<snippetFollowupPlugin2>
             // The InputParameters collection contains all the data passed in the message request.
             if (context.InputParameters.Contains("Target") &&
                 context.InputParameters["Target"] is Entity)
             {
                 // Obtain the target entity from the input parameters.
-                Entity entity = (Entity)context.InputParameters["Target"];
+                Contact entity = (Contact)context.InputParameters["Target"];
+
+                Contact preImageEntity = (context.MessageName == "Update" && context.PreEntityImages != null && context.PreEntityImages.Contains(preImageAlias)) ? ((Entity)context.PreEntityImages[preImageAlias]).ToEntity<Contact>() : null;
+
                 //</snippetFollowupPlugin2>
 
                 // Verify that the target entity represents an contact.
@@ -47,35 +56,25 @@ namespace FakeXrmEasy.Samples.PluginsWithSpkl
 
                 try
                 {
-                    // Create a task activity to follow up with the account customer in 7 days.
-                    Entity followup = new Entity("task");
-
-                    followup["subject"] = "Send e-mail to the new customer.";
-                    followup["description"] =
-                        "Follow up with the customer. Check if there are any new issues that need resolution.";
-                    followup["scheduledstart"] = DateTime.Now.AddDays(7);
-                    followup["scheduledend"] = DateTime.Now.AddDays(7);
-                    followup["category"] = context.PrimaryEntityName;
-
-                    // Refer to the contact in the task activity.
-                    if (context.OutputParameters.Contains("id"))
+                    if (preImageEntity != null)
                     {
-                        Guid regardingobjectid = new Guid(context.OutputParameters["id"].ToString());
-                        string regardingobjectidType = "contact";
+                        if (
+                            (entity.Contains("firstname") && entity.FirstName != preImageEntity.FirstName)
+                         || (entity.Contains("lastname") && entity.LastName != preImageEntity.LastName)
+                         )
 
-                        followup["regardingobjectid"] =
-                        new EntityReference(regardingobjectidType, regardingobjectid);
+                        {
+                            entity.Description = $"Customer has changed name from {preImageEntity.FirstName} {preImageEntity.LastName} to {entity.FirstName} {entity.LastName}";
+                        }
+                    }
+                    else
+                    {
+                        throw new InvalidPluginExecutionException("Pre image entity not found");
                     }
 
-                    //<snippetFollowupPlugin4>
-                    // Obtain the organization service reference.
-                    IOrganizationServiceFactory serviceFactory = (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
-                    IOrganizationService service = serviceFactory.CreateOrganizationService(context.UserId);
-                    //</snippetFollowupPlugin4>
 
-                    // Create the task in Microsoft Dynamics CRM.
-                    tracingService.Trace("FollowupPlugin: Creating the task activity.");
-                    service.Create(followup);
+
+                    //<snippetFollowupPlugin4>
                 }
                 //<snippetFollowupPlugin3>
                 catch (FaultException<OrganizationServiceFault> ex)
