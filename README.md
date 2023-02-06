@@ -9,7 +9,7 @@ This is the supporting code for a the following scenario :
 In order to build and debug the solution you will need:
 
 -  .NET 4.6.2 and the associated Developer Pack installed 
--  .netcore 3.1 sdk installed [https://dotnet.microsoft.com/en-us/download/dotnet/3.1](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
+-  .netcore 6.0 sdk installed [https://dotnet.microsoft.com/en-us/download/dotnet/6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
 ## Overview
 
