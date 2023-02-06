@@ -4,6 +4,19 @@ Sample repo you can use to experiment with the different versions of FakeXrmEasy
 
 This is the supporting code for a the following scenario :
 
+## Prerequisites
+
+In order to build and debug the solution you will need:
+
+-  .NET 4.6.2 and the associated Developer Pack installed 
+-  .netcore 3.1 sdk installed [https://dotnet.microsoft.com/en-us/download/dotnet/3.1](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
+
+## Overview
+
+This sample repo shows how to combine FakeXrmEasy versions 2 and 3 to dev and test both a plugin project that uses the CoreAssemblies sdk (.net 4.6.2), and an azure functions project that uses the [DataverseClient nuget package (.netcoreapp3.1)](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client).
+
+By using a shared project (or a git submodule, or a nuget package with source files), we can dev, test, and even debug server side code (plugins) from client apps right from the same debugging session.
+
 ## Scenario : Azure function + Dataverse + Plugin
 
 [You'll find an overview of why / how this project is structured in the docs here](https://dynamicsvalue.github.io/fake-xrm-easy-docs/quickstart/azure-functions/)
