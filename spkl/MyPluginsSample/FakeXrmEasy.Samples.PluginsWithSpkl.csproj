@@ -93,6 +93,7 @@
     <Compile Include="CrmPluginRegistrationAttribute.cs" />
     <Compile Include="CustomApiSumPlugin.cs" />
     <Compile Include="FollowUpPlugin.cs" />
+    <Compile Include="PluginWhichThrowsAnException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SomePostOperationPlugin.cs" />
   </ItemGroup>
