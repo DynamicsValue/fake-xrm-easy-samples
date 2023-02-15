@@ -90,8 +90,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssociateWithEmptyStringPlugin.cs" />
     <Compile Include="CrmPluginRegistrationAttribute.cs" />
     <Compile Include="CustomApiSumPlugin.cs" />
+    <Compile Include="AssociateWithNullPlugin.cs" />
     <Compile Include="FollowUpPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SomePostOperationPlugin.cs" />

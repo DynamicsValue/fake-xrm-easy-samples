@@ -154,10 +154,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssociateWithEmptyStringPluginTests.cs" />
     <Compile Include="AutomaticCustomApiFakeMessageExecutorExtensions.cs" />
     <Compile Include="CrmPluginRegistrationAttributeExtensions.cs" />
     <Compile Include="CustomApiSumTests.cs" />
     <Compile Include="FakeXrmEasyAutomaticRegistrationTestsBase.cs" />
+    <Compile Include="AssociateWithNullPluginTests.cs" />
     <Compile Include="FollowUpPluginTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

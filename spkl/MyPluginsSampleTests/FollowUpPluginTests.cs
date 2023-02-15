@@ -15,7 +15,16 @@ namespace MyPluginsSampleTests
         [Fact]
         public void Should_automatically_register_attribute()
         {
-            var pluginSteps = _context.CreateQuery<SdkMessageProcessingStep>().ToList();
+            var sdkMessages = _context.CreateQuery<SdkMessage>()
+                                    .Where(mes => mes.Name == "Create")
+                                    .ToList();
+            Assert.NotEmpty(sdkMessages);
+
+            var sdkMessage = sdkMessages.FirstOrDefault();
+
+            var pluginSteps = _context.CreateQuery<SdkMessageProcessingStep>()
+                        .Where(step => step.SdkMessageId.Id == sdkMessage.Id)
+                        .ToList();
             
             Assert.NotEmpty(pluginSteps);
 
@@ -23,12 +32,6 @@ namespace MyPluginsSampleTests
             Assert.Equal((int) ProcessingStepStage.Preoperation, (int) processingStep.Stage.Value);
             Assert.Equal((int) ProcessingStepMode.Synchronous, (int) processingStep.Mode.Value);
             Assert.Equal(1, processingStep.Rank);
-
-            var sdkMessage = _context.CreateQuery<SdkMessage>()
-                                    .Where(mes => mes.Id == processingStep.SdkMessageId.Id)
-                                    .FirstOrDefault();
-            Assert.NotNull(sdkMessage);
-            Assert.Equal("Create", sdkMessage.Name);
 
             var sdkMessageFilter = _context.CreateQuery<SdkMessageFilter>()
                                     .Where(messageFilter => messageFilter.Id == processingStep.SdkMessageFilterId.Id)

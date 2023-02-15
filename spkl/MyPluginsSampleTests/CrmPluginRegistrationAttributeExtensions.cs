@@ -28,7 +28,7 @@ namespace MyPluginsSampleTests
             {
                 PluginType = pluginAssemblyType.FullName,
                 MessageName = attribute.Message,
-                EntityLogicalName = attribute.EntityLogicalName,
+                EntityLogicalName = string.IsNullOrEmpty(attribute.EntityLogicalName) ? null : attribute.EntityLogicalName,
                 FilteringAttributes = attribute.FilteringAttributes.ToFilteringAttributesEnumerable(),
                 Id = !string.IsNullOrEmpty(attribute.Id) ? new Guid(attribute.Id) : Guid.Empty,
                 Mode = attribute.ExecutionMode == ExecutionModeEnum.Synchronous ? ProcessingStepMode.Synchronous : ProcessingStepMode.Asynchronous,
