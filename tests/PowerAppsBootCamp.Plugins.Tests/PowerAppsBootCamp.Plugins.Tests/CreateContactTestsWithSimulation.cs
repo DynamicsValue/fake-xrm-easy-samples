@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using DataverseEntities;
 using FakeXrmEasy.Abstractions.Plugins.Enums;
@@ -71,6 +72,33 @@ namespace FakeXrmEasy.Samples.Plugins.Tests
 
             Assert.Equal("Create", auditedStep.MessageName);
             Assert.Equal(typeof(FollowUpPlugin), auditedStep.PluginAssemblyType);
+        }
+        
+        [Fact]
+        public void Should_create_follow_task_associated_with_the_contact_and_populate_contact_id()
+        {
+            _context.RegisterPluginStep<FollowUpPlugin>(new PluginStepDefinition()
+            {
+                EntityLogicalName = Contact.EntityLogicalName,
+                MessageName = "Create",
+                Stage = ProcessingStepStage.Postoperation,
+                Mode = ProcessingStepMode.Synchronous
+            });
+            
+            //Act
+            var contact = new Contact()
+            {
+                ["firstname"] = "Joe",
+                ["emailaddress1"] = "joe@satriani.com"
+            };
+            
+            var contactId = _service.Create(contact);
+            
+            //Assert
+            var tasks = _context.CreateQuery<Task>().ToList();
+            Assert.Single(tasks);
+            Assert.Equal(contactId, tasks[0].RegardingObjectId.Id);
+            Assert.NotEqual(Guid.Empty, contactId);
         }
     }
 }

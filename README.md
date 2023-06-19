@@ -10,6 +10,8 @@ In order to build and debug the solution you will need:
 
 -  .NET 4.6.2 and the associated Developer Pack installed 
 -  .netcore 6.0 sdk installed [https://dotnet.microsoft.com/en-us/download/dotnet/6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+-  dotnet setup instrucions on Ubuntu 22.04: https://github.com/dotnet/core/issues/7699
+
 
 ## Overview
 
@@ -17,9 +19,10 @@ This sample repo shows how to combine FakeXrmEasy versions 2 and 3 to dev and te
 
 By using a shared project (or a git submodule, or a nuget package with source files), we can dev, test, and even debug server side code (plugins) from client apps right from the same debugging session.
 
-## Scenario : Azure function + Dataverse + Plugin
+## Scenario : Azure function (v4) + Dataverse + Plugin
 
 [You'll find an overview of why / how this project is structured in the docs here](https://dynamicsvalue.github.io/fake-xrm-easy-docs/quickstart/azure-functions/)
+[How to migrate a v3 Azure function to v4 Azure function](https://learn.microsoft.com/en-us/azure/azure-functions/migrate-version-3-version-4?tabs=net6-in-proc%2Cazure-cli%2Clinux&pivots=programming-language-csharp)
 
 - 1) We receive some contactdata into an Azure Function
 - 2) The Azure function creates a Contact using DataverseClient nuget package in .net core

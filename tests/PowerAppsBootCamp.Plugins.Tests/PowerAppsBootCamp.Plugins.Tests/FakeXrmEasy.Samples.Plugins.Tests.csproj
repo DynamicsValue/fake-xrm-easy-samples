@@ -55,8 +55,8 @@
     <Reference Include="FakeXrmEasy.Messages, Version=2.3.0.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\FakeXrmEasy.Messages.v9.2.3.0\lib\net462\FakeXrmEasy.Messages.dll</HintPath>
     </Reference>
-    <Reference Include="FakeXrmEasy.Plugins, Version=2.3.0.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\FakeXrmEasy.Plugins.v9.2.3.0\lib\net462\FakeXrmEasy.Plugins.dll</HintPath>
+    <Reference Include="FakeXrmEasy.Plugins, Version=2.3.2.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\FakeXrmEasy.Plugins.v9.2.3.2\lib\net462\FakeXrmEasy.Plugins.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Crm.Sdk.Proxy, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.CrmSdk.CoreAssemblies.9.0.2.27\lib\net462\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
