@@ -33,6 +33,9 @@ namespace MyPluginsSampleTests
                     UnsecureConfig = attribute.UnSecureConfiguration
                 };
             }
+
+            var pluginInstanceFactory = new PluginInstanceFactory();
+
             return new PluginStepDefinition()
             {
                 PluginType = pluginAssemblyType.FullName,
@@ -43,7 +46,8 @@ namespace MyPluginsSampleTests
                 Mode = attribute.ExecutionMode == ExecutionModeEnum.Synchronous ? ProcessingStepMode.Synchronous : ProcessingStepMode.Asynchronous,
                 Rank = attribute.ExecutionOrder,
                 Stage = (ProcessingStepStage) (int) attribute.Stage,
-                Configurations = configurations
+                Configurations = configurations,
+                //PluginInstance = pluginInstanceFactory.CreateInstanceFor(pluginAssemblyType)  needs https://github.com/DynamicsValue/fake-xrm-easy/issues/118 first
             };
         }
     }

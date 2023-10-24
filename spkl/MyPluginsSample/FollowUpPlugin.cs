@@ -16,6 +16,18 @@ namespace FakeXrmEasy.Samples.PluginsWithSpkl
     )]
     public class FollowUpPlugin : IPlugin
     {
+        private readonly string _value;
+
+        public FollowUpPlugin()
+        {
+            _value = "Default";
+        }
+
+        public FollowUpPlugin(string injectedValue)
+        {
+            _value = injectedValue;
+        }
+
         public void Execute(IServiceProvider serviceProvider)
         {
             #region Boilerplate

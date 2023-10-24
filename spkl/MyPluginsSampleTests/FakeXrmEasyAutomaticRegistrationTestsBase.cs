@@ -53,6 +53,7 @@ namespace MyPluginsSampleTests
 
         private Func<Assembly, IEnumerable<PluginStepDefinition>> PluginStepDiscoveryFn = (Assembly assembly) =>
         {
+            
             return (from t in assembly.GetTypes()
                         let attributes = t.GetCustomAttributes(typeof(CrmPluginRegistrationAttribute), true)
                         where attributes != null && attributes.Length > 0
