@@ -24,6 +24,15 @@ namespace MyPluginsSampleTests
 
         public static PluginStepDefinition ToPluginStepDefinition(this CrmPluginRegistrationAttribute attribute, Type pluginAssemblyType)
         {
+            PluginStepConfigurations configurations = null;
+            if(!string.IsNullOrWhiteSpace(attribute.SecureConfiguration) || !string.IsNullOrWhiteSpace(attribute.UnSecureConfiguration))
+            {
+                configurations = new PluginStepConfigurations()
+                {
+                    SecureConfig = attribute.SecureConfiguration,
+                    UnsecureConfig = attribute.UnSecureConfiguration
+                };
+            }
             return new PluginStepDefinition()
             {
                 PluginType = pluginAssemblyType.FullName,
@@ -34,6 +43,7 @@ namespace MyPluginsSampleTests
                 Mode = attribute.ExecutionMode == ExecutionModeEnum.Synchronous ? ProcessingStepMode.Synchronous : ProcessingStepMode.Asynchronous,
                 Rank = attribute.ExecutionOrder,
                 Stage = (ProcessingStepStage) (int) attribute.Stage,
+                Configurations = configurations
             };
         }
     }

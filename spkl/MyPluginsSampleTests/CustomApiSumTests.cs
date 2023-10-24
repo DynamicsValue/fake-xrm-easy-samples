@@ -1,4 +1,4 @@
-﻿using DataverseEntities;
+﻿using DataverseEntitiesSpkl;
 using FakeXrmEasy.Abstractions.Plugins.Enums;
 using FakeXrmEasy.Plugins.Audit;
 using FakeXrmEasy.Samples.PluginsWithSpkl;

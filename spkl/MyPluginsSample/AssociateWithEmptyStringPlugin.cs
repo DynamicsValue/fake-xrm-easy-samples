@@ -1,5 +1,5 @@
 ﻿
-using DataverseEntities;
+using DataverseEntitiesSpkl;
 using Microsoft.Xrm.Sdk;
 using System;
 using System.ServiceModel;

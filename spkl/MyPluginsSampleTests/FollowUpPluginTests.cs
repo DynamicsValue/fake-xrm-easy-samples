@@ -1,5 +1,7 @@
-﻿using DataverseEntities;
+﻿using DataverseEntitiesSpkl;
 using FakeXrmEasy.Abstractions.Plugins.Enums;
+using FakeXrmEasy.Plugins.Audit;
+using FakeXrmEasy.Samples.PluginsWithSpkl;
 using System.Linq;
 using Xunit;
 
@@ -15,30 +17,16 @@ namespace MyPluginsSampleTests
         [Fact]
         public void Should_automatically_register_attribute()
         {
-            var sdkMessages = _context.CreateQuery<SdkMessage>()
-                                    .Where(mes => mes.Name == "Create")
-                                    .ToList();
-            Assert.NotEmpty(sdkMessages);
+            var account = new Contact();
+            _service.Create(account);
 
-            var sdkMessage = sdkMessages.FirstOrDefault();
+            var pluginStepAudit = _context.GetPluginStepAudit();
+            var auditedStep = pluginStepAudit.CreateQuery().FirstOrDefault();
+            Assert.NotNull(auditedStep);
 
-            var pluginSteps = _context.CreateQuery<SdkMessageProcessingStep>()
-                        .Where(step => step.SdkMessageId.Id == sdkMessage.Id)
-                        .ToList();
-            
-            Assert.NotEmpty(pluginSteps);
-
-            var processingStep = pluginSteps.FirstOrDefault();
-            Assert.Equal((int) ProcessingStepStage.Preoperation, (int) processingStep.Stage.Value);
-            Assert.Equal((int) ProcessingStepMode.Synchronous, (int) processingStep.Mode.Value);
-            Assert.Equal(1, processingStep.Rank);
-
-            var sdkMessageFilter = _context.CreateQuery<SdkMessageFilter>()
-                                    .Where(messageFilter => messageFilter.Id == processingStep.SdkMessageFilterId.Id)
-                                    .FirstOrDefault();
-            Assert.NotNull(sdkMessageFilter);
-            Assert.Equal(Contact.EntityLogicalName, (string)sdkMessageFilter["entitylogicalname"]);
-
+            Assert.Equal("Create", auditedStep.MessageName);
+            Assert.Equal(ProcessingStepStage.Preoperation, auditedStep.Stage);
+            Assert.Equal(typeof(FollowUpPlugin), auditedStep.PluginAssemblyType);
         }
     }
 }

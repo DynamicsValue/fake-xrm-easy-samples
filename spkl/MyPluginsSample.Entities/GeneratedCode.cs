@@ -11,7 +11,7 @@
 
 [assembly: Microsoft.Xrm.Sdk.Client.ProxyTypesAssemblyAttribute()]
 
-namespace DataverseEntities
+namespace DataverseEntitiesSpkl
 {
 	
 	
@@ -2983,16 +2983,16 @@ namespace DataverseEntities
 		/// 1:N account_master_account
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("account_master_account", Microsoft.Xrm.Sdk.EntityRole.Referenced)]
-		public System.Collections.Generic.IEnumerable<DataverseEntities.Account> Referencedaccount_master_account
+		public System.Collections.Generic.IEnumerable<DataverseEntitiesSpkl.Account> Referencedaccount_master_account
 		{
 			get
 			{
-				return this.GetRelatedEntities<DataverseEntities.Account>("account_master_account", Microsoft.Xrm.Sdk.EntityRole.Referenced);
+				return this.GetRelatedEntities<DataverseEntitiesSpkl.Account>("account_master_account", Microsoft.Xrm.Sdk.EntityRole.Referenced);
 			}
 			set
 			{
 				this.OnPropertyChanging("Referencedaccount_master_account");
-				this.SetRelatedEntities<DataverseEntities.Account>("account_master_account", Microsoft.Xrm.Sdk.EntityRole.Referenced, value);
+				this.SetRelatedEntities<DataverseEntitiesSpkl.Account>("account_master_account", Microsoft.Xrm.Sdk.EntityRole.Referenced, value);
 				this.OnPropertyChanged("Referencedaccount_master_account");
 			}
 		}
@@ -3001,16 +3001,16 @@ namespace DataverseEntities
 		/// 1:N account_parent_account
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("account_parent_account", Microsoft.Xrm.Sdk.EntityRole.Referenced)]
-		public System.Collections.Generic.IEnumerable<DataverseEntities.Account> Referencedaccount_parent_account
+		public System.Collections.Generic.IEnumerable<DataverseEntitiesSpkl.Account> Referencedaccount_parent_account
 		{
 			get
 			{
-				return this.GetRelatedEntities<DataverseEntities.Account>("account_parent_account", Microsoft.Xrm.Sdk.EntityRole.Referenced);
+				return this.GetRelatedEntities<DataverseEntitiesSpkl.Account>("account_parent_account", Microsoft.Xrm.Sdk.EntityRole.Referenced);
 			}
 			set
 			{
 				this.OnPropertyChanging("Referencedaccount_parent_account");
-				this.SetRelatedEntities<DataverseEntities.Account>("account_parent_account", Microsoft.Xrm.Sdk.EntityRole.Referenced, value);
+				this.SetRelatedEntities<DataverseEntitiesSpkl.Account>("account_parent_account", Microsoft.Xrm.Sdk.EntityRole.Referenced, value);
 				this.OnPropertyChanged("Referencedaccount_parent_account");
 			}
 		}
@@ -3019,16 +3019,16 @@ namespace DataverseEntities
 		/// 1:N Account_Tasks
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("Account_Tasks")]
-		public System.Collections.Generic.IEnumerable<DataverseEntities.Task> Account_Tasks
+		public System.Collections.Generic.IEnumerable<DataverseEntitiesSpkl.Task> Account_Tasks
 		{
 			get
 			{
-				return this.GetRelatedEntities<DataverseEntities.Task>("Account_Tasks", null);
+				return this.GetRelatedEntities<DataverseEntitiesSpkl.Task>("Account_Tasks", null);
 			}
 			set
 			{
 				this.OnPropertyChanging("Account_Tasks");
-				this.SetRelatedEntities<DataverseEntities.Task>("Account_Tasks", null, value);
+				this.SetRelatedEntities<DataverseEntitiesSpkl.Task>("Account_Tasks", null, value);
 				this.OnPropertyChanged("Account_Tasks");
 			}
 		}
@@ -3037,16 +3037,16 @@ namespace DataverseEntities
 		/// 1:N contact_customer_accounts
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("contact_customer_accounts")]
-		public System.Collections.Generic.IEnumerable<DataverseEntities.Contact> contact_customer_accounts
+		public System.Collections.Generic.IEnumerable<DataverseEntitiesSpkl.Contact> contact_customer_accounts
 		{
 			get
 			{
-				return this.GetRelatedEntities<DataverseEntities.Contact>("contact_customer_accounts", null);
+				return this.GetRelatedEntities<DataverseEntitiesSpkl.Contact>("contact_customer_accounts", null);
 			}
 			set
 			{
 				this.OnPropertyChanging("contact_customer_accounts");
-				this.SetRelatedEntities<DataverseEntities.Contact>("contact_customer_accounts", null, value);
+				this.SetRelatedEntities<DataverseEntitiesSpkl.Contact>("contact_customer_accounts", null, value);
 				this.OnPropertyChanged("contact_customer_accounts");
 			}
 		}
@@ -3056,11 +3056,11 @@ namespace DataverseEntities
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("masterid")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("account_master_account", Microsoft.Xrm.Sdk.EntityRole.Referencing)]
-		public DataverseEntities.Account Referencingaccount_master_account
+		public DataverseEntitiesSpkl.Account Referencingaccount_master_account
 		{
 			get
 			{
-				return this.GetRelatedEntity<DataverseEntities.Account>("account_master_account", Microsoft.Xrm.Sdk.EntityRole.Referencing);
+				return this.GetRelatedEntity<DataverseEntitiesSpkl.Account>("account_master_account", Microsoft.Xrm.Sdk.EntityRole.Referencing);
 			}
 		}
 		
@@ -3069,16 +3069,16 @@ namespace DataverseEntities
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("parentaccountid")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("account_parent_account", Microsoft.Xrm.Sdk.EntityRole.Referencing)]
-		public DataverseEntities.Account Referencingaccount_parent_account
+		public DataverseEntitiesSpkl.Account Referencingaccount_parent_account
 		{
 			get
 			{
-				return this.GetRelatedEntity<DataverseEntities.Account>("account_parent_account", Microsoft.Xrm.Sdk.EntityRole.Referencing);
+				return this.GetRelatedEntity<DataverseEntitiesSpkl.Account>("account_parent_account", Microsoft.Xrm.Sdk.EntityRole.Referencing);
 			}
 			set
 			{
 				this.OnPropertyChanging("Referencingaccount_parent_account");
-				this.SetRelatedEntity<DataverseEntities.Account>("account_parent_account", Microsoft.Xrm.Sdk.EntityRole.Referencing, value);
+				this.SetRelatedEntity<DataverseEntitiesSpkl.Account>("account_parent_account", Microsoft.Xrm.Sdk.EntityRole.Referencing, value);
 				this.OnPropertyChanged("Referencingaccount_parent_account");
 			}
 		}
@@ -3088,16 +3088,16 @@ namespace DataverseEntities
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("primarycontactid")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("account_primary_contact")]
-		public DataverseEntities.Contact account_primary_contact
+		public DataverseEntitiesSpkl.Contact account_primary_contact
 		{
 			get
 			{
-				return this.GetRelatedEntity<DataverseEntities.Contact>("account_primary_contact", null);
+				return this.GetRelatedEntity<DataverseEntitiesSpkl.Contact>("account_primary_contact", null);
 			}
 			set
 			{
 				this.OnPropertyChanging("account_primary_contact");
-				this.SetRelatedEntity<DataverseEntities.Contact>("account_primary_contact", null, value);
+				this.SetRelatedEntity<DataverseEntitiesSpkl.Contact>("account_primary_contact", null, value);
 				this.OnPropertyChanged("account_primary_contact");
 			}
 		}
@@ -6788,16 +6788,16 @@ namespace DataverseEntities
 		/// 1:N account_primary_contact
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("account_primary_contact")]
-		public System.Collections.Generic.IEnumerable<DataverseEntities.Account> account_primary_contact
+		public System.Collections.Generic.IEnumerable<DataverseEntitiesSpkl.Account> account_primary_contact
 		{
 			get
 			{
-				return this.GetRelatedEntities<DataverseEntities.Account>("account_primary_contact", null);
+				return this.GetRelatedEntities<DataverseEntitiesSpkl.Account>("account_primary_contact", null);
 			}
 			set
 			{
 				this.OnPropertyChanging("account_primary_contact");
-				this.SetRelatedEntities<DataverseEntities.Account>("account_primary_contact", null, value);
+				this.SetRelatedEntities<DataverseEntitiesSpkl.Account>("account_primary_contact", null, value);
 				this.OnPropertyChanged("account_primary_contact");
 			}
 		}
@@ -6806,16 +6806,16 @@ namespace DataverseEntities
 		/// 1:N contact_customer_contacts
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("contact_customer_contacts", Microsoft.Xrm.Sdk.EntityRole.Referenced)]
-		public System.Collections.Generic.IEnumerable<DataverseEntities.Contact> Referencedcontact_customer_contacts
+		public System.Collections.Generic.IEnumerable<DataverseEntitiesSpkl.Contact> Referencedcontact_customer_contacts
 		{
 			get
 			{
-				return this.GetRelatedEntities<DataverseEntities.Contact>("contact_customer_contacts", Microsoft.Xrm.Sdk.EntityRole.Referenced);
+				return this.GetRelatedEntities<DataverseEntitiesSpkl.Contact>("contact_customer_contacts", Microsoft.Xrm.Sdk.EntityRole.Referenced);
 			}
 			set
 			{
 				this.OnPropertyChanging("Referencedcontact_customer_contacts");
-				this.SetRelatedEntities<DataverseEntities.Contact>("contact_customer_contacts", Microsoft.Xrm.Sdk.EntityRole.Referenced, value);
+				this.SetRelatedEntities<DataverseEntitiesSpkl.Contact>("contact_customer_contacts", Microsoft.Xrm.Sdk.EntityRole.Referenced, value);
 				this.OnPropertyChanged("Referencedcontact_customer_contacts");
 			}
 		}
@@ -6824,16 +6824,16 @@ namespace DataverseEntities
 		/// 1:N contact_master_contact
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("contact_master_contact", Microsoft.Xrm.Sdk.EntityRole.Referenced)]
-		public System.Collections.Generic.IEnumerable<DataverseEntities.Contact> Referencedcontact_master_contact
+		public System.Collections.Generic.IEnumerable<DataverseEntitiesSpkl.Contact> Referencedcontact_master_contact
 		{
 			get
 			{
-				return this.GetRelatedEntities<DataverseEntities.Contact>("contact_master_contact", Microsoft.Xrm.Sdk.EntityRole.Referenced);
+				return this.GetRelatedEntities<DataverseEntitiesSpkl.Contact>("contact_master_contact", Microsoft.Xrm.Sdk.EntityRole.Referenced);
 			}
 			set
 			{
 				this.OnPropertyChanging("Referencedcontact_master_contact");
-				this.SetRelatedEntities<DataverseEntities.Contact>("contact_master_contact", Microsoft.Xrm.Sdk.EntityRole.Referenced, value);
+				this.SetRelatedEntities<DataverseEntitiesSpkl.Contact>("contact_master_contact", Microsoft.Xrm.Sdk.EntityRole.Referenced, value);
 				this.OnPropertyChanged("Referencedcontact_master_contact");
 			}
 		}
@@ -6842,16 +6842,16 @@ namespace DataverseEntities
 		/// 1:N Contact_Tasks
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("Contact_Tasks")]
-		public System.Collections.Generic.IEnumerable<DataverseEntities.Task> Contact_Tasks
+		public System.Collections.Generic.IEnumerable<DataverseEntitiesSpkl.Task> Contact_Tasks
 		{
 			get
 			{
-				return this.GetRelatedEntities<DataverseEntities.Task>("Contact_Tasks", null);
+				return this.GetRelatedEntities<DataverseEntitiesSpkl.Task>("Contact_Tasks", null);
 			}
 			set
 			{
 				this.OnPropertyChanging("Contact_Tasks");
-				this.SetRelatedEntities<DataverseEntities.Task>("Contact_Tasks", null, value);
+				this.SetRelatedEntities<DataverseEntitiesSpkl.Task>("Contact_Tasks", null, value);
 				this.OnPropertyChanged("Contact_Tasks");
 			}
 		}
@@ -6861,16 +6861,16 @@ namespace DataverseEntities
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("parentcustomerid")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("contact_customer_accounts")]
-		public DataverseEntities.Account contact_customer_accounts
+		public DataverseEntitiesSpkl.Account contact_customer_accounts
 		{
 			get
 			{
-				return this.GetRelatedEntity<DataverseEntities.Account>("contact_customer_accounts", null);
+				return this.GetRelatedEntity<DataverseEntitiesSpkl.Account>("contact_customer_accounts", null);
 			}
 			set
 			{
 				this.OnPropertyChanging("contact_customer_accounts");
-				this.SetRelatedEntity<DataverseEntities.Account>("contact_customer_accounts", null, value);
+				this.SetRelatedEntity<DataverseEntitiesSpkl.Account>("contact_customer_accounts", null, value);
 				this.OnPropertyChanged("contact_customer_accounts");
 			}
 		}
@@ -6880,16 +6880,16 @@ namespace DataverseEntities
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("parentcustomerid")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("contact_customer_contacts", Microsoft.Xrm.Sdk.EntityRole.Referencing)]
-		public DataverseEntities.Contact Referencingcontact_customer_contacts
+		public DataverseEntitiesSpkl.Contact Referencingcontact_customer_contacts
 		{
 			get
 			{
-				return this.GetRelatedEntity<DataverseEntities.Contact>("contact_customer_contacts", Microsoft.Xrm.Sdk.EntityRole.Referencing);
+				return this.GetRelatedEntity<DataverseEntitiesSpkl.Contact>("contact_customer_contacts", Microsoft.Xrm.Sdk.EntityRole.Referencing);
 			}
 			set
 			{
 				this.OnPropertyChanging("Referencingcontact_customer_contacts");
-				this.SetRelatedEntity<DataverseEntities.Contact>("contact_customer_contacts", Microsoft.Xrm.Sdk.EntityRole.Referencing, value);
+				this.SetRelatedEntity<DataverseEntitiesSpkl.Contact>("contact_customer_contacts", Microsoft.Xrm.Sdk.EntityRole.Referencing, value);
 				this.OnPropertyChanged("Referencingcontact_customer_contacts");
 			}
 		}
@@ -6899,11 +6899,11 @@ namespace DataverseEntities
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("masterid")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("contact_master_contact", Microsoft.Xrm.Sdk.EntityRole.Referencing)]
-		public DataverseEntities.Contact Referencingcontact_master_contact
+		public DataverseEntitiesSpkl.Contact Referencingcontact_master_contact
 		{
 			get
 			{
-				return this.GetRelatedEntity<DataverseEntities.Contact>("contact_master_contact", Microsoft.Xrm.Sdk.EntityRole.Referencing);
+				return this.GetRelatedEntity<DataverseEntitiesSpkl.Contact>("contact_master_contact", Microsoft.Xrm.Sdk.EntityRole.Referencing);
 			}
 		}
 	}
@@ -7386,16 +7386,16 @@ namespace DataverseEntities
 		/// 1:N sdkmessageid_sdkmessagefilter
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sdkmessageid_sdkmessagefilter")]
-		public System.Collections.Generic.IEnumerable<DataverseEntities.SdkMessageFilter> sdkmessageid_sdkmessagefilter
+		public System.Collections.Generic.IEnumerable<DataverseEntitiesSpkl.SdkMessageFilter> sdkmessageid_sdkmessagefilter
 		{
 			get
 			{
-				return this.GetRelatedEntities<DataverseEntities.SdkMessageFilter>("sdkmessageid_sdkmessagefilter", null);
+				return this.GetRelatedEntities<DataverseEntitiesSpkl.SdkMessageFilter>("sdkmessageid_sdkmessagefilter", null);
 			}
 			set
 			{
 				this.OnPropertyChanging("sdkmessageid_sdkmessagefilter");
-				this.SetRelatedEntities<DataverseEntities.SdkMessageFilter>("sdkmessageid_sdkmessagefilter", null, value);
+				this.SetRelatedEntities<DataverseEntitiesSpkl.SdkMessageFilter>("sdkmessageid_sdkmessagefilter", null, value);
 				this.OnPropertyChanged("sdkmessageid_sdkmessagefilter");
 			}
 		}
@@ -7404,16 +7404,16 @@ namespace DataverseEntities
 		/// 1:N sdkmessageid_sdkmessageprocessingstep
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sdkmessageid_sdkmessageprocessingstep")]
-		public System.Collections.Generic.IEnumerable<DataverseEntities.SdkMessageProcessingStep> sdkmessageid_sdkmessageprocessingstep
+		public System.Collections.Generic.IEnumerable<DataverseEntitiesSpkl.SdkMessageProcessingStep> sdkmessageid_sdkmessageprocessingstep
 		{
 			get
 			{
-				return this.GetRelatedEntities<DataverseEntities.SdkMessageProcessingStep>("sdkmessageid_sdkmessageprocessingstep", null);
+				return this.GetRelatedEntities<DataverseEntitiesSpkl.SdkMessageProcessingStep>("sdkmessageid_sdkmessageprocessingstep", null);
 			}
 			set
 			{
 				this.OnPropertyChanging("sdkmessageid_sdkmessageprocessingstep");
-				this.SetRelatedEntities<DataverseEntities.SdkMessageProcessingStep>("sdkmessageid_sdkmessageprocessingstep", null, value);
+				this.SetRelatedEntities<DataverseEntitiesSpkl.SdkMessageProcessingStep>("sdkmessageid_sdkmessageprocessingstep", null, value);
 				this.OnPropertyChanged("sdkmessageid_sdkmessageprocessingstep");
 			}
 		}
@@ -7816,16 +7816,16 @@ namespace DataverseEntities
 		/// 1:N sdkmessagefilterid_sdkmessageprocessingstep
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sdkmessagefilterid_sdkmessageprocessingstep")]
-		public System.Collections.Generic.IEnumerable<DataverseEntities.SdkMessageProcessingStep> sdkmessagefilterid_sdkmessageprocessingstep
+		public System.Collections.Generic.IEnumerable<DataverseEntitiesSpkl.SdkMessageProcessingStep> sdkmessagefilterid_sdkmessageprocessingstep
 		{
 			get
 			{
-				return this.GetRelatedEntities<DataverseEntities.SdkMessageProcessingStep>("sdkmessagefilterid_sdkmessageprocessingstep", null);
+				return this.GetRelatedEntities<DataverseEntitiesSpkl.SdkMessageProcessingStep>("sdkmessagefilterid_sdkmessageprocessingstep", null);
 			}
 			set
 			{
 				this.OnPropertyChanging("sdkmessagefilterid_sdkmessageprocessingstep");
-				this.SetRelatedEntities<DataverseEntities.SdkMessageProcessingStep>("sdkmessagefilterid_sdkmessageprocessingstep", null, value);
+				this.SetRelatedEntities<DataverseEntitiesSpkl.SdkMessageProcessingStep>("sdkmessagefilterid_sdkmessageprocessingstep", null, value);
 				this.OnPropertyChanged("sdkmessagefilterid_sdkmessageprocessingstep");
 			}
 		}
@@ -7835,16 +7835,16 @@ namespace DataverseEntities
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sdkmessageid")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sdkmessageid_sdkmessagefilter")]
-		public DataverseEntities.SdkMessage sdkmessageid_sdkmessagefilter
+		public DataverseEntitiesSpkl.SdkMessage sdkmessageid_sdkmessagefilter
 		{
 			get
 			{
-				return this.GetRelatedEntity<DataverseEntities.SdkMessage>("sdkmessageid_sdkmessagefilter", null);
+				return this.GetRelatedEntity<DataverseEntitiesSpkl.SdkMessage>("sdkmessageid_sdkmessagefilter", null);
 			}
 			set
 			{
 				this.OnPropertyChanging("sdkmessageid_sdkmessagefilter");
-				this.SetRelatedEntity<DataverseEntities.SdkMessage>("sdkmessageid_sdkmessagefilter", null, value);
+				this.SetRelatedEntity<DataverseEntitiesSpkl.SdkMessage>("sdkmessageid_sdkmessagefilter", null, value);
 				this.OnPropertyChanged("sdkmessageid_sdkmessagefilter");
 			}
 		}
@@ -8693,16 +8693,16 @@ namespace DataverseEntities
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sdkmessagefilterid")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sdkmessagefilterid_sdkmessageprocessingstep")]
-		public DataverseEntities.SdkMessageFilter sdkmessagefilterid_sdkmessageprocessingstep
+		public DataverseEntitiesSpkl.SdkMessageFilter sdkmessagefilterid_sdkmessageprocessingstep
 		{
 			get
 			{
-				return this.GetRelatedEntity<DataverseEntities.SdkMessageFilter>("sdkmessagefilterid_sdkmessageprocessingstep", null);
+				return this.GetRelatedEntity<DataverseEntitiesSpkl.SdkMessageFilter>("sdkmessagefilterid_sdkmessageprocessingstep", null);
 			}
 			set
 			{
 				this.OnPropertyChanging("sdkmessagefilterid_sdkmessageprocessingstep");
-				this.SetRelatedEntity<DataverseEntities.SdkMessageFilter>("sdkmessagefilterid_sdkmessageprocessingstep", null, value);
+				this.SetRelatedEntity<DataverseEntitiesSpkl.SdkMessageFilter>("sdkmessagefilterid_sdkmessageprocessingstep", null, value);
 				this.OnPropertyChanged("sdkmessagefilterid_sdkmessageprocessingstep");
 			}
 		}
@@ -8712,16 +8712,16 @@ namespace DataverseEntities
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sdkmessageid")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("sdkmessageid_sdkmessageprocessingstep")]
-		public DataverseEntities.SdkMessage sdkmessageid_sdkmessageprocessingstep
+		public DataverseEntitiesSpkl.SdkMessage sdkmessageid_sdkmessageprocessingstep
 		{
 			get
 			{
-				return this.GetRelatedEntity<DataverseEntities.SdkMessage>("sdkmessageid_sdkmessageprocessingstep", null);
+				return this.GetRelatedEntity<DataverseEntitiesSpkl.SdkMessage>("sdkmessageid_sdkmessageprocessingstep", null);
 			}
 			set
 			{
 				this.OnPropertyChanging("sdkmessageid_sdkmessageprocessingstep");
-				this.SetRelatedEntity<DataverseEntities.SdkMessage>("sdkmessageid_sdkmessageprocessingstep", null, value);
+				this.SetRelatedEntity<DataverseEntitiesSpkl.SdkMessage>("sdkmessageid_sdkmessageprocessingstep", null, value);
 				this.OnPropertyChanged("sdkmessageid_sdkmessageprocessingstep");
 			}
 		}
@@ -9629,16 +9629,16 @@ namespace DataverseEntities
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("regardingobjectid")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("Account_Tasks")]
-		public DataverseEntities.Account Account_Tasks
+		public DataverseEntitiesSpkl.Account Account_Tasks
 		{
 			get
 			{
-				return this.GetRelatedEntity<DataverseEntities.Account>("Account_Tasks", null);
+				return this.GetRelatedEntity<DataverseEntitiesSpkl.Account>("Account_Tasks", null);
 			}
 			set
 			{
 				this.OnPropertyChanging("Account_Tasks");
-				this.SetRelatedEntity<DataverseEntities.Account>("Account_Tasks", null, value);
+				this.SetRelatedEntity<DataverseEntitiesSpkl.Account>("Account_Tasks", null, value);
 				this.OnPropertyChanged("Account_Tasks");
 			}
 		}
@@ -9648,16 +9648,16 @@ namespace DataverseEntities
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("regardingobjectid")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("Contact_Tasks")]
-		public DataverseEntities.Contact Contact_Tasks
+		public DataverseEntitiesSpkl.Contact Contact_Tasks
 		{
 			get
 			{
-				return this.GetRelatedEntity<DataverseEntities.Contact>("Contact_Tasks", null);
+				return this.GetRelatedEntity<DataverseEntitiesSpkl.Contact>("Contact_Tasks", null);
 			}
 			set
 			{
 				this.OnPropertyChanging("Contact_Tasks");
-				this.SetRelatedEntity<DataverseEntities.Contact>("Contact_Tasks", null, value);
+				this.SetRelatedEntity<DataverseEntitiesSpkl.Contact>("Contact_Tasks", null, value);
 				this.OnPropertyChanged("Contact_Tasks");
 			}
 		}
@@ -9679,68 +9679,68 @@ namespace DataverseEntities
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="DataverseEntities.Account"/> entities.
+		/// Gets a binding to the set of all <see cref="DataverseEntitiesSpkl.Account"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<DataverseEntities.Account> AccountSet
+		public System.Linq.IQueryable<DataverseEntitiesSpkl.Account> AccountSet
 		{
 			get
 			{
-				return this.CreateQuery<DataverseEntities.Account>();
+				return this.CreateQuery<DataverseEntitiesSpkl.Account>();
 			}
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="DataverseEntities.Contact"/> entities.
+		/// Gets a binding to the set of all <see cref="DataverseEntitiesSpkl.Contact"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<DataverseEntities.Contact> ContactSet
+		public System.Linq.IQueryable<DataverseEntitiesSpkl.Contact> ContactSet
 		{
 			get
 			{
-				return this.CreateQuery<DataverseEntities.Contact>();
+				return this.CreateQuery<DataverseEntitiesSpkl.Contact>();
 			}
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="DataverseEntities.SdkMessage"/> entities.
+		/// Gets a binding to the set of all <see cref="DataverseEntitiesSpkl.SdkMessage"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<DataverseEntities.SdkMessage> SdkMessageSet
+		public System.Linq.IQueryable<DataverseEntitiesSpkl.SdkMessage> SdkMessageSet
 		{
 			get
 			{
-				return this.CreateQuery<DataverseEntities.SdkMessage>();
+				return this.CreateQuery<DataverseEntitiesSpkl.SdkMessage>();
 			}
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="DataverseEntities.SdkMessageFilter"/> entities.
+		/// Gets a binding to the set of all <see cref="DataverseEntitiesSpkl.SdkMessageFilter"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<DataverseEntities.SdkMessageFilter> SdkMessageFilterSet
+		public System.Linq.IQueryable<DataverseEntitiesSpkl.SdkMessageFilter> SdkMessageFilterSet
 		{
 			get
 			{
-				return this.CreateQuery<DataverseEntities.SdkMessageFilter>();
+				return this.CreateQuery<DataverseEntitiesSpkl.SdkMessageFilter>();
 			}
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="DataverseEntities.SdkMessageProcessingStep"/> entities.
+		/// Gets a binding to the set of all <see cref="DataverseEntitiesSpkl.SdkMessageProcessingStep"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<DataverseEntities.SdkMessageProcessingStep> SdkMessageProcessingStepSet
+		public System.Linq.IQueryable<DataverseEntitiesSpkl.SdkMessageProcessingStep> SdkMessageProcessingStepSet
 		{
 			get
 			{
-				return this.CreateQuery<DataverseEntities.SdkMessageProcessingStep>();
+				return this.CreateQuery<DataverseEntitiesSpkl.SdkMessageProcessingStep>();
 			}
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="DataverseEntities.Task"/> entities.
+		/// Gets a binding to the set of all <see cref="DataverseEntitiesSpkl.Task"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<DataverseEntities.Task> TaskSet
+		public System.Linq.IQueryable<DataverseEntitiesSpkl.Task> TaskSet
 		{
 			get
 			{
-				return this.CreateQuery<DataverseEntities.Task>();
+				return this.CreateQuery<DataverseEntitiesSpkl.Task>();
 			}
 		}
 	}
