@@ -1,0 +1,80 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9E5C97FF-1D71-4332-B383-2E2810D9FBE8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "functions", "src\functions\functions.csproj", "{7E06F5F3-536D-459C-8321-2AD503886526}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{AB5C0FF0-953B-4054-99BF-2DBBA58563D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAzureFunctionTests", "tests\MyAzureFunctionTests\MyAzureFunctionTests.csproj", "{DDA486DC-4E24-4C0D-A99E-AF4643B47CFB}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DataverseEntities.Shared", "src\DataverseEntities\DataverseEntities.Shared\DataverseEntities.Shared.shproj", "{363930FF-0294-43D8-89B6-FC7592E96287}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FakeXrmEasy.Samples.Plugins.Shared", "src\shared\FakeXrmEasy.Samples.Plugins.Shared\FakeXrmEasy.Samples.Plugins.Shared.shproj", "{56DB6983-334B-4755-89DF-8E538889A196}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{032EAE30-72DA-4C55-82B3-FEADBEEC9243}"
+	ProjectSection(SolutionItems) = preProject
+		nuget.config = nuget.config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FakeXrmEasy.Samples.Tests.Shared", "tests\FakeXrmEasy.Samples.Tests.Shared\FakeXrmEasy.Samples.Tests.Shared.shproj", "{4391192A-FC47-41E7-8F85-CA269988D05A}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		src\DataverseEntities\DataverseEntities.Shared\DataverseEntities.Shared.projitems*{363930ff-0294-43d8-89b6-fc7592e96287}*SharedItemsImports = 13
+		tests\FakeXrmEasy.Samples.Tests.Shared\FakeXrmEasy.Samples.Tests.Shared.projitems*{4391192a-fc47-41e7-8f85-ca269988d05a}*SharedItemsImports = 13
+		src\shared\FakeXrmEasy.Samples.Plugins.Shared\FakeXrmEasy.Samples.Plugins.Shared.projitems*{56db6983-334b-4755-89df-8e538889a196}*SharedItemsImports = 13
+		src\DataverseEntities\DataverseEntities.Shared\DataverseEntities.Shared.projitems*{7e06f5f3-536d-459c-8321-2ad503886526}*SharedItemsImports = 5
+		src\shared\FakeXrmEasy.Samples.Plugins.Shared\FakeXrmEasy.Samples.Plugins.Shared.projitems*{dda486dc-4e24-4c0d-a99e-af4643b47cfb}*SharedItemsImports = 5
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E06F5F3-536D-459C-8321-2AD503886526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E06F5F3-536D-459C-8321-2AD503886526}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E06F5F3-536D-459C-8321-2AD503886526}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7E06F5F3-536D-459C-8321-2AD503886526}.Debug|x64.Build.0 = Debug|Any CPU
+		{7E06F5F3-536D-459C-8321-2AD503886526}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7E06F5F3-536D-459C-8321-2AD503886526}.Debug|x86.Build.0 = Debug|Any CPU
+		{7E06F5F3-536D-459C-8321-2AD503886526}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E06F5F3-536D-459C-8321-2AD503886526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E06F5F3-536D-459C-8321-2AD503886526}.Release|x64.ActiveCfg = Release|Any CPU
+		{7E06F5F3-536D-459C-8321-2AD503886526}.Release|x64.Build.0 = Release|Any CPU
+		{7E06F5F3-536D-459C-8321-2AD503886526}.Release|x86.ActiveCfg = Release|Any CPU
+		{7E06F5F3-536D-459C-8321-2AD503886526}.Release|x86.Build.0 = Release|Any CPU
+		{DDA486DC-4E24-4C0D-A99E-AF4643B47CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA486DC-4E24-4C0D-A99E-AF4643B47CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA486DC-4E24-4C0D-A99E-AF4643B47CFB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DDA486DC-4E24-4C0D-A99E-AF4643B47CFB}.Debug|x64.Build.0 = Debug|Any CPU
+		{DDA486DC-4E24-4C0D-A99E-AF4643B47CFB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DDA486DC-4E24-4C0D-A99E-AF4643B47CFB}.Debug|x86.Build.0 = Debug|Any CPU
+		{DDA486DC-4E24-4C0D-A99E-AF4643B47CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA486DC-4E24-4C0D-A99E-AF4643B47CFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDA486DC-4E24-4C0D-A99E-AF4643B47CFB}.Release|x64.ActiveCfg = Release|Any CPU
+		{DDA486DC-4E24-4C0D-A99E-AF4643B47CFB}.Release|x64.Build.0 = Release|Any CPU
+		{DDA486DC-4E24-4C0D-A99E-AF4643B47CFB}.Release|x86.ActiveCfg = Release|Any CPU
+		{DDA486DC-4E24-4C0D-A99E-AF4643B47CFB}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7E06F5F3-536D-459C-8321-2AD503886526} = {9E5C97FF-1D71-4332-B383-2E2810D9FBE8}
+		{DDA486DC-4E24-4C0D-A99E-AF4643B47CFB} = {AB5C0FF0-953B-4054-99BF-2DBBA58563D5}
+		{363930FF-0294-43D8-89B6-FC7592E96287} = {9E5C97FF-1D71-4332-B383-2E2810D9FBE8}
+		{56DB6983-334B-4755-89DF-8E538889A196} = {9E5C97FF-1D71-4332-B383-2E2810D9FBE8}
+		{4391192A-FC47-41E7-8F85-CA269988D05A} = {AB5C0FF0-953B-4054-99BF-2DBBA58563D5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A9D257C-CACF-49FF-826C-F28A2940F212}
+	EndGlobalSection
+EndGlobal
