@@ -2,7 +2,8 @@
 using DataverseEntities;
 using Xunit;
 
-/* Uncomment to test your own commercial license key
+
+// Uncomment this block to test your own commercial license key
 
 namespace FakeXrmEasy.Samples.Plugins.Tests
 {
@@ -20,5 +21,3 @@ namespace FakeXrmEasy.Samples.Plugins.Tests
         }
     }
 }
-
-*/
