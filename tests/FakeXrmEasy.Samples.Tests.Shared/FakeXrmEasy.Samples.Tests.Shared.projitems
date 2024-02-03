@@ -9,6 +9,7 @@
     <Import_RootNamespace>FakeXrmEasy.Samples.Tests.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CommercialLicense\SubscriptionBlobStorageProvider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CustomApiExecutors\CustomApiSumFakeMessageExecutor.cs" />
   </ItemGroup>
 </Project>
