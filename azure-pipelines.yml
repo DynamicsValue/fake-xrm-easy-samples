@@ -13,7 +13,7 @@ variables:
   buildConfiguration: 'Debug'
 
 steps:
-- script: dotnet nuget disable source "local-packages"
+- script: dotnet nuget disable source "local"
   displayName: 'Disable local packages feed' 
 
 - script: dotnet build --configuration $(buildConfiguration) FakeXrmEasy.Samples.sln
