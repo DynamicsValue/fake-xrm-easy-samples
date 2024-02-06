@@ -26,4 +26,5 @@ steps:
     solution: 'FakeXrmEasy.Samples.v2only.sln'
     msbuildArchitecture: 'x64'
     restoreNugetPackages: true
+    msbuildVersion: '17.0'
 
