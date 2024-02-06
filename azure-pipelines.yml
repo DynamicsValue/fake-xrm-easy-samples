@@ -16,8 +16,8 @@ steps:
 - script: dotnet nuget disable source "local"
   displayName: 'Disable local packages feed' 
 
-- script: dotnet restore --configuration $(buildConfiguration) FakeXrmEasy.Samples.sln
-  displayName: 'dotnet restore $(buildConfiguration)'
+- script: dotnet restore
+  displayName: 'dotnet restore'
 
-- script: dotnet build --configuration $(buildConfiguration) FakeXrmEasy.Samples.sln
-  displayName: 'dotnet build $(buildConfiguration)'
+- script: dotnet build
+  displayName: 'dotnet build'
