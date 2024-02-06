@@ -2,8 +2,6 @@
 using DataverseEntities;
 using Xunit;
 
-/* Uncomment to test your own commercial license key
-
 namespace FakeXrmEasy.Samples.Plugins.Tests
 {
     public class CommercialLicenseKeyTests: FakeXrmEasyCommercialLicenseTestsBase
@@ -21,4 +19,3 @@ namespace FakeXrmEasy.Samples.Plugins.Tests
     }
 }
 
-*/
