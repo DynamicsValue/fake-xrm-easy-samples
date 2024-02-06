@@ -22,6 +22,7 @@ steps:
     versionSpec: "6.0.5"
 
 - task: NuGetCommand@2
+  displayName: 'NuGet Restore'
   inputs:
     command: 'restore'
     restoreSolution: 'FakeXrmEasy.Samples.v2only.sln'
@@ -30,12 +31,16 @@ steps:
 
 
 - task: MSBuild@1
+  displayName: 'Build'
   inputs:
     solution: 'FakeXrmEasy.Samples.v2only.sln'
     msbuildArchitecture: 'x64'
     msbuildVersion: '17.0'
 
 - task: VSTest@3
+  displayName: 'Test'
+  env:
+    FXE_LICENSE_KEY: $(FXE_LICENSE_KEY)
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
