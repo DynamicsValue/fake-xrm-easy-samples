@@ -16,6 +16,11 @@ steps:
 - script: dotnet nuget disable source "local"
   displayName: 'Disable local packages feed' 
 
+
+- task: NuGetToolInstaller@1
+  inputs:
+    versionSpec: "6.0.5"
+
 - task: MSBuild@1
   inputs:
     solution: 'FakeXrmEasy.Samples.v2only.sln'
