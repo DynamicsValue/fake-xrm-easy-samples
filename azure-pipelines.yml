@@ -21,9 +21,26 @@ steps:
   inputs:
     versionSpec: "6.0.5"
 
+- task: NuGetCommand@2
+  inputs:
+    command: 'restore'
+    restoreSolution: 'FakeXrmEasy.Samples.v2only.sln'
+    feedsToUse: 'config'
+    nugetConfigPath: 'nuget.config'
+
+
 - task: MSBuild@1
   inputs:
     solution: 'FakeXrmEasy.Samples.v2only.sln'
     msbuildArchitecture: 'x64'
-    restoreNugetPackages: true
+    msbuildVersion: '17.0'
+
+- task: VSTest@3
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*tests*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
 
