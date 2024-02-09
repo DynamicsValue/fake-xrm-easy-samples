@@ -64,8 +64,8 @@
     <Reference Include="FakeXrmEasy.Abstractions, Version=2.4.0.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\FakeXrmEasy.Abstractions.v9.2.4.0\lib\net462\FakeXrmEasy.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="FakeXrmEasy.Core, Version=2.4.1.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\FakeXrmEasy.Core.v9.2.4.1\lib\net462\FakeXrmEasy.Core.dll</HintPath>
+    <Reference Include="FakeXrmEasy.Core, Version=2.4.2.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\FakeXrmEasy.Core.v9.2.4.2\lib\net462\FakeXrmEasy.Core.dll</HintPath>
     </Reference>
     <Reference Include="FakeXrmEasy.Messages, Version=2.4.0.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\FakeXrmEasy.Messages.v9.2.4.0\lib\net462\FakeXrmEasy.Messages.dll</HintPath>
