@@ -92,9 +92,13 @@ namespace FakeXrmEasy.Samples.Tests.Shared.CommercialLicense
             {
                 if (_settings == null)
                 {
-                    string fileName = FakeXrmEasySettingsFileName;
-                    string jsonString = File.ReadAllText(fileName);
-                    _settings = JsonConvert.DeserializeObject<FakeXrmEasySettings>(jsonString);
+                    string key = Environment.GetEnvironmentVariable("FXE_LICENSE_KEY");
+                    string blobUri = Environment.GetEnvironmentVariable("FXE_BLOB_STORAGE_URI");
+                    _settings = new FakeXrmEasySettings()
+                    {
+                        LicenseKey = key,
+                        BlobStorageUri = blobUri
+                    };
                 }
             }
         }
