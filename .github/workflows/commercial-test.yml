@@ -28,6 +28,9 @@ jobs:
         with:
           dotnet-version: ${{ env.dotnet-version }}
 
+      - name: Disable local source
+        run: dotnet nuget disable source "local"
+        
       - name: Test
         run: dotnet test FakeXrmEasy.Samples.v3only.sln
         env:
@@ -45,6 +48,9 @@ jobs:
         with:
           dotnet-version: ${{ env.dotnet-version }}
 
+      - name: Disable local source
+        run: dotnet nuget disable source "local"
+      
       - name: Test
         run: dotnet test FakeXrmEasy.Samples.sln
         env:
