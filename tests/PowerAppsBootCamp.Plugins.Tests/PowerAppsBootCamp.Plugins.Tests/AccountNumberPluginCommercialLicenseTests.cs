@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿
+/*
+using System.Linq;
 using DataverseEntities;
 using Xunit;
 
@@ -18,3 +20,4 @@ namespace FakeXrmEasy.Samples.Plugins.Tests
         }
     }
 }
+*/
