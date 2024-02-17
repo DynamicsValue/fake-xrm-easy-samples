@@ -1,0 +1,61 @@
+name: Commercial CI Test
+
+on:
+  push:
+    branches: [ commercial-test ]
+    paths-ignore:
+      - 'coverage/**'
+      - '*.md'
+      - '*.txt'
+
+env:
+  dotnet-version: 6.0.407
+
+jobs:
+  build-netcore:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    
+    runs-on: ${{matrix.os}}
+    
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup .NET Core for Actual Source
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{ env.dotnet-version }}
+
+      - name: Disable local packages feed
+        run: dotnet nuget disable source "local-packages"
+
+      - name: Test
+        run: dotnet test FakeXrmEasy.Samples.v3only.sln
+        env:
+          FAKE_XRM_EASY_CI: "1"
+          FXE_LICENSE_KEY: ${{ secrets.FXE_LICENSE_KEY }}
+  
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup .NET Core for Actual Source
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{ env.dotnet-version }}
+
+      - name: Disable local packages feed
+        run: dotnet nuget disable source "local-packages"
+
+      - name: Test
+        run: dotnet test FakeXrmEasy.Samples.sln
+        env:
+          FAKE_XRM_EASY_CI: "1"
+          FXE_LICENSE_KEY: ${{ secrets.FXE_LICENSE_KEY }}
+  
+  
+    
