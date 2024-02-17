@@ -28,9 +28,6 @@ jobs:
         with:
           dotnet-version: ${{ env.dotnet-version }}
 
-      - name: Disable local packages feed
-        run: dotnet nuget disable source "local-packages"
-
       - name: Test
         run: dotnet test FakeXrmEasy.Samples.v3only.sln
         env:
@@ -47,9 +44,6 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{ env.dotnet-version }}
-
-      - name: Disable local packages feed
-        run: dotnet nuget disable source "local-packages"
 
       - name: Test
         run: dotnet test FakeXrmEasy.Samples.sln
