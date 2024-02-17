@@ -31,7 +31,7 @@ namespace FakeXrmEasy.Samples.Plugins.Tests
                         .UseMessages()
 
                         .SetLicense(FakeXrmEasyLicense.Commercial)
-                        .SetSubscriptionStorageProvider(new SubscriptionBlobStorageProvider())
+                        .SetSubscriptionStorageProvider(new SubscriptionBlobStorageProvider(), renewalRequested: true)
                         .Build();
 
             _service = _context.GetOrganizationService();

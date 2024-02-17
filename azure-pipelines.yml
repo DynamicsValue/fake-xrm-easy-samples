@@ -1,0 +1,51 @@
+# ASP.NET Core
+# Build and test ASP.NET Core projects targeting .NET Core.
+# Add steps that run tests, create a NuGet package, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- commercial-test
+
+pool:
+  vmImage: windows-latest
+
+variables:
+  buildConfiguration: 'Debug'
+
+steps:
+- script: dotnet nuget disable source "local"
+  displayName: 'Disable local packages feed' 
+
+
+- task: NuGetToolInstaller@1
+  inputs:
+    versionSpec: "6.0.5"
+
+- task: NuGetCommand@2
+  displayName: 'NuGet Restore'
+  inputs:
+    command: 'restore'
+    restoreSolution: 'FakeXrmEasy.Samples.v2only.sln'
+    feedsToUse: 'config'
+    nugetConfigPath: 'nuget.config'
+
+
+- task: MSBuild@1
+  displayName: 'Build'
+  inputs:
+    solution: 'FakeXrmEasy.Samples.v2only.sln'
+    msbuildArchitecture: 'x64'
+    msbuildVersion: '17.0'
+
+- task: VSTest@3
+  displayName: 'Test'
+  env:
+    FXE_LICENSE_KEY: $(FXE_LICENSE_KEY)
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*tests*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+

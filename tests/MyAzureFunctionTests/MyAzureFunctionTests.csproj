@@ -6,12 +6,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FakeXrmEasy.Messages.v9" Version="3.3.3" />
-    <PackageReference Include="FakeXrmEasy.Plugins.v9" Version="3.3.3" />
+    <PackageReference Include="FakeXrmEasy.Messages.v9" Version="3.4.0" />
+    <PackageReference Include="FakeXrmEasy.Core.v9" Version="3.4.2" />
+    <PackageReference Include="FakeXrmEasy.Plugins.v9" Version="3.4.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
     <PackageReference Include="xunit" Version="2.4.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.19.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,5 +21,7 @@
   </ItemGroup>
 
   <Import Project="..\..\src\shared\FakeXrmEasy.Samples.Plugins.Shared\FakeXrmEasy.Samples.Plugins.Shared.projitems" Label="Shared" />
+
+  <Import Project="..\FakeXrmEasy.Samples.Tests.Shared\FakeXrmEasy.Samples.Tests.Shared.projitems" Label="Shared" />
 
 </Project>

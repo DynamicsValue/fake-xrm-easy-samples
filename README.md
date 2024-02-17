@@ -9,13 +9,13 @@ This is the supporting code for a the following scenario :
 In order to build and debug the solution you will need:
 
 -  .NET 4.6.2 and the associated Developer Pack installed 
--  .netcore 6.0 sdk installed [https://dotnet.microsoft.com/en-us/download/dotnet/6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+-  .net 6.0 sdk installed [https://dotnet.microsoft.com/en-us/download/dotnet/6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 -  dotnet setup instrucions on Ubuntu 22.04: https://github.com/dotnet/core/issues/7699
 
 
 ## Overview
 
-This sample repo shows how to combine FakeXrmEasy versions 2 and 3 to dev and test both a plugin project that uses the CoreAssemblies sdk (.net 4.6.2), and an azure functions project that uses the [DataverseClient nuget package (.netcoreapp3.1)](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client).
+This sample repo shows how to combine FakeXrmEasy versions 2 and 3 to dev and test both a plugin project that uses the CoreAssemblies sdk (.net 4.6.2), and an azure functions project that uses the [DataverseClient nuget package (.net6.0)](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client).
 
 By using a shared project (or a git submodule, or a nuget package with source files), we can dev, test, and even debug server side code (plugins) from client apps right from the same debugging session.
 
