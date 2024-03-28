@@ -164,6 +164,7 @@
     <Compile Include="FollowUpPluginTests.cs" />
     <Compile Include="PluginInstanceFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestExceptionsThrownInPipeline.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
