@@ -1,8 +1,8 @@
-﻿using System.Linq;
+﻿
+/*
+using System.Linq;
 using DataverseEntities;
 using Xunit;
-
-/* Uncomment to test your own commercial license key
 
 namespace FakeXrmEasy.Samples.Plugins.Tests
 {
@@ -20,5 +20,4 @@ namespace FakeXrmEasy.Samples.Plugins.Tests
         }
     }
 }
-
 */
