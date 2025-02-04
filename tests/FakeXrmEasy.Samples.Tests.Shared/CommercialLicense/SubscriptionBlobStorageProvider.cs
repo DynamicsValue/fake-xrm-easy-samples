@@ -16,7 +16,7 @@ namespace FakeXrmEasy.Samples.Tests.Shared.CommercialLicense
         private static FakeXrmEasySettings _settings;
         private static readonly object _settingsLock = new object();
         
-        /// <summary>
+        /// <summary>0
         /// https://learn.microsoft.com/en-us/azure/storage/blobs/concurrency-manage
         /// </summary>
         private ETag _eTag;

@@ -102,13 +102,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		src\DataverseEntities\DataverseEntities.Shared\DataverseEntities.Shared.projitems*{363930ff-0294-43d8-89b6-fc7592e96287}*SharedItemsImports = 13
-		src\DataverseEntities\DataverseEntities.Shared\DataverseEntities.Shared.projitems*{3c7be2d7-d88a-42a9-8d92-1c30ffba1592}*SharedItemsImports = 4
-		src\shared\FakeXrmEasy.Samples.Plugins.Shared\FakeXrmEasy.Samples.Plugins.Shared.projitems*{3c7be2d7-d88a-42a9-8d92-1c30ffba1592}*SharedItemsImports = 4
+		src\DataverseEntities\DataverseEntities.Shared\DataverseEntities.Shared.projitems*{3c7be2d7-d88a-42a9-8d92-1c30ffba1592}*SharedItemsImports = 5
+		src\shared\FakeXrmEasy.Samples.Plugins.Shared\FakeXrmEasy.Samples.Plugins.Shared.projitems*{3c7be2d7-d88a-42a9-8d92-1c30ffba1592}*SharedItemsImports = 5
 		tests\FakeXrmEasy.Samples.Tests.Shared\FakeXrmEasy.Samples.Tests.Shared.projitems*{4391192a-fc47-41e7-8f85-ca269988d05a}*SharedItemsImports = 13
 		src\shared\FakeXrmEasy.Samples.Plugins.Shared\FakeXrmEasy.Samples.Plugins.Shared.projitems*{56db6983-334b-4755-89df-8e538889a196}*SharedItemsImports = 13
 		src\DataverseEntities\DataverseEntities.Shared\DataverseEntities.Shared.projitems*{7e06f5f3-536d-459c-8321-2ad503886526}*SharedItemsImports = 5
 		src\shared\FakeXrmEasy.Samples.Plugins.Shared\FakeXrmEasy.Samples.Plugins.Shared.projitems*{dda486dc-4e24-4c0d-a99e-af4643b47cfb}*SharedItemsImports = 5
 		tests\FakeXrmEasy.Samples.Tests.Shared\FakeXrmEasy.Samples.Tests.Shared.projitems*{dda486dc-4e24-4c0d-a99e-af4643b47cfb}*SharedItemsImports = 5
-		tests\FakeXrmEasy.Samples.Tests.Shared\FakeXrmEasy.Samples.Tests.Shared.projitems*{fc900ac8-6690-4cc0-aad7-79687242d435}*SharedItemsImports = 4
+		tests\FakeXrmEasy.Samples.Tests.Shared\FakeXrmEasy.Samples.Tests.Shared.projitems*{fc900ac8-6690-4cc0-aad7-79687242d435}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal
