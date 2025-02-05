@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net462</TargetFramework>
+	</PropertyGroup>
+	<PropertyGroup>
+		<SignAssembly>true</SignAssembly>
+		<AssemblyOriginatorKeyFile>FakeXrmEasy.Samples.snk</AssemblyOriginatorKeyFile>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CrmSdk.Workflow" Version="9.0.2.56" />
+	</ItemGroup>
+
+
+</Project>
