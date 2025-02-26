@@ -26,6 +26,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FakeXrmEasy.Samples.Tests.Shared", "tests\FakeXrmEasy.Samples.Tests.Shared\FakeXrmEasy.Samples.Tests.Shared.shproj", "{4391192A-FC47-41E7-8F85-CA269988D05A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeXrmEasy.Samples.CodeActivities", "src\CodeActivities\FakeXrmEasy.Samples.CodeActivities\FakeXrmEasy.Samples.CodeActivities.csproj", "{1FAE0584-D4CD-42BF-9C9C-CD5C1941B244}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeXrmEasy.Samples.CodeActivities.Tests", "tests\FakeXrmEasy.Samples.CodeActivities.Tests\FakeXrmEasy.Samples.CodeActivities.Tests.csproj", "{4180377A-926A-437E-8015-BD1CF2E738B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,6 +88,30 @@ Global
 		{FC900AC8-6690-4CC0-AAD7-79687242D435}.Release|x64.Build.0 = Release|Any CPU
 		{FC900AC8-6690-4CC0-AAD7-79687242D435}.Release|x86.ActiveCfg = Release|Any CPU
 		{FC900AC8-6690-4CC0-AAD7-79687242D435}.Release|x86.Build.0 = Release|Any CPU
+		{1FAE0584-D4CD-42BF-9C9C-CD5C1941B244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FAE0584-D4CD-42BF-9C9C-CD5C1941B244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FAE0584-D4CD-42BF-9C9C-CD5C1941B244}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1FAE0584-D4CD-42BF-9C9C-CD5C1941B244}.Debug|x64.Build.0 = Debug|Any CPU
+		{1FAE0584-D4CD-42BF-9C9C-CD5C1941B244}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1FAE0584-D4CD-42BF-9C9C-CD5C1941B244}.Debug|x86.Build.0 = Debug|Any CPU
+		{1FAE0584-D4CD-42BF-9C9C-CD5C1941B244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FAE0584-D4CD-42BF-9C9C-CD5C1941B244}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FAE0584-D4CD-42BF-9C9C-CD5C1941B244}.Release|x64.ActiveCfg = Release|Any CPU
+		{1FAE0584-D4CD-42BF-9C9C-CD5C1941B244}.Release|x64.Build.0 = Release|Any CPU
+		{1FAE0584-D4CD-42BF-9C9C-CD5C1941B244}.Release|x86.ActiveCfg = Release|Any CPU
+		{1FAE0584-D4CD-42BF-9C9C-CD5C1941B244}.Release|x86.Build.0 = Release|Any CPU
+		{4180377A-926A-437E-8015-BD1CF2E738B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4180377A-926A-437E-8015-BD1CF2E738B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4180377A-926A-437E-8015-BD1CF2E738B4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4180377A-926A-437E-8015-BD1CF2E738B4}.Debug|x64.Build.0 = Debug|Any CPU
+		{4180377A-926A-437E-8015-BD1CF2E738B4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4180377A-926A-437E-8015-BD1CF2E738B4}.Debug|x86.Build.0 = Debug|Any CPU
+		{4180377A-926A-437E-8015-BD1CF2E738B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4180377A-926A-437E-8015-BD1CF2E738B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4180377A-926A-437E-8015-BD1CF2E738B4}.Release|x64.ActiveCfg = Release|Any CPU
+		{4180377A-926A-437E-8015-BD1CF2E738B4}.Release|x64.Build.0 = Release|Any CPU
+		{4180377A-926A-437E-8015-BD1CF2E738B4}.Release|x86.ActiveCfg = Release|Any CPU
+		{4180377A-926A-437E-8015-BD1CF2E738B4}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,19 +124,21 @@ Global
 		{56DB6983-334B-4755-89DF-8E538889A196} = {9E5C97FF-1D71-4332-B383-2E2810D9FBE8}
 		{FC900AC8-6690-4CC0-AAD7-79687242D435} = {AB5C0FF0-953B-4054-99BF-2DBBA58563D5}
 		{4391192A-FC47-41E7-8F85-CA269988D05A} = {AB5C0FF0-953B-4054-99BF-2DBBA58563D5}
+		{1FAE0584-D4CD-42BF-9C9C-CD5C1941B244} = {9E5C97FF-1D71-4332-B383-2E2810D9FBE8}
+		{4180377A-926A-437E-8015-BD1CF2E738B4} = {AB5C0FF0-953B-4054-99BF-2DBBA58563D5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9A9D257C-CACF-49FF-826C-F28A2940F212}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		src\DataverseEntities\DataverseEntities.Shared\DataverseEntities.Shared.projitems*{363930ff-0294-43d8-89b6-fc7592e96287}*SharedItemsImports = 13
-		src\DataverseEntities\DataverseEntities.Shared\DataverseEntities.Shared.projitems*{3c7be2d7-d88a-42a9-8d92-1c30ffba1592}*SharedItemsImports = 4
-		src\shared\FakeXrmEasy.Samples.Plugins.Shared\FakeXrmEasy.Samples.Plugins.Shared.projitems*{3c7be2d7-d88a-42a9-8d92-1c30ffba1592}*SharedItemsImports = 4
+		src\DataverseEntities\DataverseEntities.Shared\DataverseEntities.Shared.projitems*{3c7be2d7-d88a-42a9-8d92-1c30ffba1592}*SharedItemsImports = 5
+		src\shared\FakeXrmEasy.Samples.Plugins.Shared\FakeXrmEasy.Samples.Plugins.Shared.projitems*{3c7be2d7-d88a-42a9-8d92-1c30ffba1592}*SharedItemsImports = 5
 		tests\FakeXrmEasy.Samples.Tests.Shared\FakeXrmEasy.Samples.Tests.Shared.projitems*{4391192a-fc47-41e7-8f85-ca269988d05a}*SharedItemsImports = 13
 		src\shared\FakeXrmEasy.Samples.Plugins.Shared\FakeXrmEasy.Samples.Plugins.Shared.projitems*{56db6983-334b-4755-89df-8e538889a196}*SharedItemsImports = 13
 		src\DataverseEntities\DataverseEntities.Shared\DataverseEntities.Shared.projitems*{7e06f5f3-536d-459c-8321-2ad503886526}*SharedItemsImports = 5
 		src\shared\FakeXrmEasy.Samples.Plugins.Shared\FakeXrmEasy.Samples.Plugins.Shared.projitems*{dda486dc-4e24-4c0d-a99e-af4643b47cfb}*SharedItemsImports = 5
 		tests\FakeXrmEasy.Samples.Tests.Shared\FakeXrmEasy.Samples.Tests.Shared.projitems*{dda486dc-4e24-4c0d-a99e-af4643b47cfb}*SharedItemsImports = 5
-		tests\FakeXrmEasy.Samples.Tests.Shared\FakeXrmEasy.Samples.Tests.Shared.projitems*{fc900ac8-6690-4cc0-aad7-79687242d435}*SharedItemsImports = 4
+		tests\FakeXrmEasy.Samples.Tests.Shared\FakeXrmEasy.Samples.Tests.Shared.projitems*{fc900ac8-6690-4cc0-aad7-79687242d435}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal
