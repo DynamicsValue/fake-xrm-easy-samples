@@ -11,6 +11,7 @@ namespace MyAzureFunctionTests
         [Fact]
         public async Task Should_create_contact()
         {
+            /* This test will fail if you don't have a valid license key or the blob storage uri in environment variables, please also make sure the Blob SAS Url has both Read and Write permissions */
             var result = await CreateContactFn.CreateContact(_service, "Joe", "joe@satriani.com");
             Assert.True(result.Succeeded);
             
