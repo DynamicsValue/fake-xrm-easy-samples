@@ -62,9 +62,10 @@ namespace FakeXrmEasy.Samples.Tests.Shared.CommercialLicense
             }
             var response = blobClient.DownloadContent();
             var rawResponse = response.GetRawResponse();
-            var jsonString = rawResponse.Content.ToString();
+            var jsonString = response.Value.Content.ToString();
             _eTag = rawResponse.Headers.ETag.Value;
-            return JsonConvert.DeserializeObject<ISubscriptionUsage>(jsonString);
+            var subscriptionUsage = JsonConvert.DeserializeObject<SubscriptionUsage>(jsonString);
+            return subscriptionUsage;
         }
 
         public void Write(ISubscriptionUsage currentUsage)

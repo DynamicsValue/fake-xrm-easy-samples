@@ -9,7 +9,12 @@
     <Import_RootNamespace>FakeXrmEasy.Samples.Tests.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CommercialLicense\JsonConcreteCollectionTypeConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)commerciallicense\JsonConcreteTypeConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CommercialLicense\SubscriptionBlobStorageProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CommercialLicense\SubscriptionUpgradeRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CommercialLicense\SubscriptionUsage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)commerciallicense\SubscriptionUserInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CustomApiExecutors\CustomApiSumFakeMessageExecutor.cs" />
   </ItemGroup>
 </Project>
