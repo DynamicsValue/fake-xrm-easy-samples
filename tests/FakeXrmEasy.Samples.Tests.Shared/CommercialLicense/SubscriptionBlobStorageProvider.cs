@@ -71,7 +71,9 @@ namespace FakeXrmEasy.Samples.Tests.Shared.CommercialLicense
         public void Write(ISubscriptionUsage currentUsage)
         {
             ReadSettings();
-            
+
+            currentUsage.LastTimeChecked = DateTime.UtcNow;
+
             var blobContainerClient = GetBlobContainerClient();
             var blobClient = blobContainerClient.GetBlobClient(FakeXrmEasySettingsFileName);
             var jsonString = JsonConvert.SerializeObject(currentUsage);
