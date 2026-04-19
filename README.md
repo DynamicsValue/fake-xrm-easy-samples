@@ -8,8 +8,8 @@ This is the supporting code for a the following scenario :
 
 In order to build and debug the solution you will need:
 
--  .NET 4.6.2 and the associated Developer Pack installed 
--  .net 6.0 sdk installed [https://dotnet.microsoft.com/en-us/download/dotnet/6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+-  .NET 4.6.2 and .NET 4.8 and the associated Developer Pack installed
+-  .net 8.0 sdk installed [https://dotnet.microsoft.com/en-us/download/dotnet/8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 -  dotnet setup instrucions on Ubuntu 22.04: https://github.com/dotnet/core/issues/7699
 
 
