@@ -1,4 +1,5 @@
 ﻿using FakeXrmEasy.Abstractions.Plugins.Enums;
+using FakeXrmEasy.Plugins.PluginImages;
 using FakeXrmEasy.Plugins.PluginSteps;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ namespace MyPluginsSampleTests
             if (string.IsNullOrWhiteSpace(filteringAttributes))
                 return new List<string>();
 
-            if(filteringAttributes.IndexOf(",") < 0)
+            if (filteringAttributes.IndexOf(",") < 0)
                 return new List<string>();
 
             return filteringAttributes
@@ -35,6 +36,17 @@ namespace MyPluginsSampleTests
             }
 
             var pluginInstanceFactory = new PluginInstanceFactory();
+            List<PluginImageDefinition> images = new List<PluginImageDefinition>();
+
+            if (attribute.Image1Name != null)
+            {
+                images.Add(new PluginImageDefinition(attribute.Image1Name, (ProcessingStepImageType)attribute.Image1Type, attribute.Image1Attributes.Split(',')));
+            }
+
+            if (attribute.Image2Name != null)
+            {
+                images.Add(new PluginImageDefinition(attribute.Image2Name, (ProcessingStepImageType)attribute.Image2Type, attribute.Image2Attributes.Split(',')));
+            }
 
             return new PluginStepDefinition()
             {
@@ -48,6 +60,7 @@ namespace MyPluginsSampleTests
                 Stage = (ProcessingStepStage) (int) attribute.Stage,
                 Configurations = configurations,
                 //PluginInstance = pluginInstanceFactory.CreateInstanceFor(pluginAssemblyType)  needs https://github.com/DynamicsValue/fake-xrm-easy/issues/118 first
+                ImagesDefinitions = images,
             };
         }
     }
