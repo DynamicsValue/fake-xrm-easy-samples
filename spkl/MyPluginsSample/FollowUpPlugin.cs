@@ -52,7 +52,7 @@ namespace FakeXrmEasy.Samples.PluginsWithSpkl
                 Entity entity = (Entity)context.InputParameters["Target"];
                 //</snippetFollowupPlugin2>
 
-                // Verify that the target entity represents an account.
+                // Verify that the target entity represents an contact.
                 // If not, this plug-in was not registered correctly.
                 if (entity.LogicalName != "contact")
                     return;
